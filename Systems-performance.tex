@@ -1,0 +1,41 @@
+\documentclass{99-Styles/MICE}
+\input 99-Styles/GetPackages
+
+\linenumbers
+\modulolinenumbers[5]
+
+\begin{document}
+
+\input{00a-Top-matter/00a-Top-matter}
+
+\makeatletter
+
+\input{99-Styles/MICE-defs}
+
+\parindent 10pt
+\pagestyle{plain}
+\pagenumbering{arabic}                   
+\setcounter{page}{1}
+
+\input 00b-Abstract/00b-Abstract
+
+\input 01-Introduction/01-Introduction
+\input 02-TOF/02-TOF % Durga, Viktor, Scott
+\input 03-Ckov/03-Ckov % Lucien, David
+\input 04-KL/04-KL % Domizia, Ludovico, Mariyan
+\input 05-EMR/05-EMR % Francois
+\newpage
+\input 06-Tracker/06-Tracker % Melissa
+\input 07-PID/07-PID % Scott, Melissa
+\input 08-Track-matching/08-Track-matching % Melissa, Chris R.
+\input 09-Detector-alignment/09-Detector-alignment % Francois
+\input 10-Magnets-and-beam-optics/10-Magnets-and-beam-optics % Chris H., Joe
+\input 11-Absorber/11-Absorber % Ajit, Scott
+
+\input 80-Conclusions/80-Conclusions
+
+\clearpage
+\bibliographystyle{99-Styles/utphys}
+\bibliography{Concatenated-bibliography}
+
+\end{document}
