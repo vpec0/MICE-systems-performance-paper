@@ -3,11 +3,155 @@
 \section{Track Matching}
 \label{Sect:TM}
 
-\subsection{Introduction}
-\label{SubSect:TM_Intro}
 
-\subsection{Performance}
-\label{SubSect:TM_Performance}
+\newcommand{\topmatterallplots}[4]{%
+    \hspace*{-2.0cm}\includegraphics*[width=1.1\textwidth]{#1/Figures/#2/#3.pdf}
+    \caption{#4 \label{fig:#3}}
+    }
+
+\subsection{Global reconstruction}
+
+The overall detector performance can be validated by extrapolating tracks from
+one detector to another and comparing the reconstructed coordinates with the 
+extrapolated values. Tracks measured in
+the upstream tracker are extrapolated upstream to ToF1 and ToF0, and downstream
+to TKD and ToF2. Where there are materials in the beamline, the energy change on
+passing through the material is estimated using the most probably energy loss. 
+Material thicknesses are approximated by the on-axis thickness. 
+
+Asymmetric effects can be introduced due to scattering from the walls of the
+cooling channel as the beam is not symmetric in the channel. In order to 
+minimise the effects of such scattering, only events whose projected 
+trajectory is  significantly distant from the apertures are considered in this 
+analysis. The following sample selection is considered:
+
+\begin{itemize}
+\item{Downstream sample:} Events must be included in the downstream sample to
+be considered in this analysis
+\item{Aperture cut:} The projected upstream track must be within 100 mm radius 
+from the beam axis at the following apertures: the upstream absorber safety window;
+the upstream absorber window; the absorber centre; the downstream absorber window;
+the downstream absorber safety window; the upstream edge of SSD; the Helium window
+in SSD; the downstream edge of the downstream PRY aperture. This is performed
+even when the lH2 absorber was not installed, for the sake of consistency and
+because in some instances mounting flanges can limit the aperture and consistency.
+\item{1 space point in ToF2:} The event must have exactly one space point in ToF2.
+\item{Successful track extrapolation to ToF2:} The projected upstream track must
+have been successfully extrapolated to ToF2
+\end{itemize}
+
+The sample sizes are shown for data in table \ref{tab:data_cuts_summary_2_0} and
+\ref{tab:data_cuts_summary_2_1}. The equivalent MC sample sizes are listed in 
+\ref{tab:mc_cuts_summary_2_0} and \ref{tab:mc_cuts_summary_2_1}.
+
+\let\splitcell\undefined
+\include{08-Track-matching/data_cuts_summary_2}
+\let\splitcell\undefined
+\include{08-Track-matching/mc_cuts_summary_2}
+\let\splitcell\undefined
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tof1_x}
+    {Residual horizontal (x) position in ToF1 of tracker tracks following extrapolation from TKU. \label{fig:tof1_extrapolated_x}}
+\end{figure}
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tof1_y}
+    {Residual vertical (y) position in ToF1 of tracker tracks following extrapolation from TKU. \label{fig:tof1_extrapolated_y}}
+\end{figure}
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tof0_t}
+    {Residual ToF0 time of the extrapolated track. Track trajectories were drawn from TKU, while the track times were
+    drawn from ToF1 with appropriate offsets for time-of-flight from TKU to ToF1 considered. \label{fig:tof0_extrapolated_t}}
+\end{figure}
+
+The extrapolated position following extrapolation to ToF1 is shown in fig.
+\ref{fig:tof1_extrapolated_x} and \ref{fig:tof1_extrapolated_y}. In general the width 
+of the distributions are comparable between MC and data. Where the diffuser is in
+place for higher emittance beams, the extrapolation goes through the diffuser
+material so the residuals are wider, owing to the increased scattering from the
+diffuser.
+
+The time-of-flight residual in data shows a systematic offset from 0 and relative to the
+MC. The offset from 0 gets worse for higher emittance beams. It is thought to be
+an intrinsic property of the beam; muons that are scattered in materials between 
+the tracker and the TOF have systematically shorter path lengths than the 
+extrapolated trajectories, resulting in systematically longer extrapolated time
+of flight. The MC reconstruction is known to have issues, as evidenced by the 
+discrepancy in slab $dt$ for ToF0 and ToF1.
+
+\textcolor{red}{Plot momentum vs dt for ToF01 and ToF12}
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_x}
+    {Residual $x$ position of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_x}}
+\end{figure}
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_y}
+    {Residual $y$ position of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_y}}
+\end{figure}
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_px}
+    {Residual $p_x$ of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_px}}
+\end{figure}
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_py}
+    {Residual $p_y$ of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_py}}
+\end{figure}
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_p}
+    {Residual $p_{tot}$ of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_p}}
+\end{figure}
+
+Small misalignments between TKU extrapolated tracks and TKD are observed, 
+indicated by the offset of transverse variables from 0, shown in 
+fig. \ref{fig:tkd_extrapolated_x} and \ref{fig:tkd_extrapolated_y}. There are known, 
+uncorrected misalignments in the detector system and there are expected to be 
+additional misalignments in the magnets which could lead to these offsets.
+
+The total momentum shows discrepancy between TKU and TKD of about 1 MeV/c. This
+is consistent with the systematic offset in the tracker momentum resolution 
+shown in fig. \ref{fig:tku_resolution} and \ref{fig:tkd_resolution}. It is
+interesting to note that the level of agreement between MC and data varies
+on a setting-by-setting basis in a statistically significant manner. Agreement
+is better for the settings where the liquid hydrogen windows were installed.
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tof2_t}
+    {Residual time of TKU tracks extrapolated to ToF2, as compared to the time measured in ToF2. The track times were
+    drawn from ToF1 with appropriate offsets for time-of-flight from TKU to ToF1 considered.}
+\end{figure}
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_ds_residual_tof2_x}
+    {Residual $x$ position of TKD tracks extrapolated to TOF2, as compared to the position measured in TOF2.}
+\end{figure}
+
+\begin{figure}[!tbh]
+    \centering
+    \topmatterallplots{08-Track-matching}{compare_globals}{global_ds_residual_tof2_y}
+    {Residual $y$ position of TKD tracks extrapolated to TOF2, as compared to the position measured in TOF2.}
+\end{figure}
+
+Further small misalignments are observed in the position residuals between TOF2
+and tracks extrapolated from TKD. This is attributed to alignment issues.
+
+TOF2 exhibits a significant offset from the extrapolated track.
 
 \subsection{Beam based magnet alignment}
 \label{SubSect:TM_Magnet_Alignment}

@@ -1,0 +1,6 @@
+*.aux
+Systems-performance.log
+Systems-performance.out
+Systems-performance.tex~
+.gitignore~
+.directory
