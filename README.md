@@ -8,3 +8,4 @@ v0.2: first contributions
       - TM: plots and text
       - Tracker: plots and text
       - KL: plots and text
+      - LH2 absorber: text and figures

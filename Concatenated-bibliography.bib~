@@ -1,0 +1,239 @@
+% Bibliography section for 04-Instrumentation
+
+@article{NOTE367,
+author  = {{Dobbs}, A. and others},
+title   = "{The MICE Luminosity Monitor}",
+journal = "{MICE Note 367}",
+url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0367/MICE0367.pdf}",
+year    = "2012"
+}
+
+@ARTICLE{2012JInst...7.5009B,
+   author = {{Bogomilov}, M. and others},
+    title = "{The MICE Muon Beam on ISIS and the beam-line instrumentation of the Muon Ionization Cooling Experiment}",
+  journal = {Journal of Instrumentation},
+archivePrefix = "arXiv",
+   eprint = {1203.4089},
+ primaryClass = "physics.acc-ph",
+     year = 2012,
+    month = may,
+   volume = 7,
+    pages = {5009},
+      doi = {10.1088/1748-0221/7/05/P05009},
+   adsurl = {http://adsabs.harvard.edu/abs/2012JInst...7.5009B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+  
+@ARTICLE{2013arXiv1306.1509T,
+   author = {{The MICE Collaboration}},
+    title = "{Characterisation of the muon beams for the Muon Ionisation Cooling Experiment}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1306.1509},
+ primaryClass = "physics.acc-ph",
+ keywords = {Physics - Accelerator Physics},
+     year = 2013,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2013arXiv1306.1509T},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{NOTE473,
+author  = {{Cremaldi}, L. and others},
+title   = "{Progress on Cherenkov Reconstruction in MICE}",
+journal = "{MICE Note 473}",
+url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0473/MICE0473.pdf}",
+year    = "2015"
+}
+
+@ARTICLE{ELLIS2011136,
+title = "The design, construction and performance of the MICE scintillating fibre trackers",
+journal = "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+volume = "659",
+number = "1",
+pages = "136 - 153",
+year = "2011",
+issn = "0168-9002",
+doi = "https://doi.org/10.1016/j.nima.2011.04.041",
+url = "http://www.sciencedirect.com/science/article/pii/S0168900211008126",
+author = {{Ellis}, M. and others},
+keywords = "Muon detector, Scintillating fibre, Tracker, Ionisation cooling"
+}
+
+@ARTICLE{2016JInst..11P3001A,
+   author = {{Adams}, D. and others},
+    title = "{Pion contamination in the MICE muon beam}",
+  journal = {Journal of Instrumentation},
+archivePrefix = "arXiv",
+   eprint = {1511.00556},
+ primaryClass = "physics.ins-det",
+     year = 2016,
+    month = mar,
+   volume = 11,
+    pages = {P03001},
+      doi = {10.1088/1748-0221/11/03/P03001},
+   adsurl = {http://adsabs.harvard.edu/abs/2016JInst..11P3001A},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{NOTE451,
+author  = {{Dobbs}, A. and others},
+title   = "{The Reconstruction Software for the MICE Scintillating Fibre Trackers}",
+journal = "{MICE Note 451}",
+url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0451/MICE0451.pdf}",
+year    = "2014"
+}
+
+@ARTICLE{2016JInst..11T10007,
+   author = {{Asfandiyarov}, R. and others},
+    title = "{The design and construction of the MICE Electron-Muon Ranger}",
+  journal = {Journal of Instrumentation},
+archivePrefix = "arXiv",
+   eprint = {1607.04955},
+ primaryClass = "physics.ins-det",
+     year = 2016,
+    month = oct,
+   volume = 11,
+      eid = {T10007},
+    pages = {T10007},
+      doi = {10.1088/1748-0221/11/10/T10007},
+   adsurl = {http://adsabs.harvard.edu/abs/2016JInst..11T10007},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@MastersThesis{Drielsma:2017doj,
+   author = {Drielsma, Francois},
+    title = "{Electron-Muon Ranger: hardware characterization}",
+     year = {2014},
+   eprint = {1710.06946},
+ archivePrefix = "arXiv",
+ primaryClass = "physics.ins-det",
+   school = {University of Geneva},
+   url    = {https://arxiv.org/abs/1710.06946}
+}
+
+@ARTICLE{2015JInst..10P2012A,
+   author = {{Adams}, D. and others},
+    title = "{Electron-muon ranger: performance in the MICE muon beam}",
+  journal = {Journal of Instrumentation},
+archivePrefix = "arXiv",
+   eprint = {1510.08306},
+ primaryClass = "physics.ins-det",
+     year = 2015,
+    month = dec,
+   volume = 10,
+      eid = {P12012},
+    pages = {P12012},
+      doi = {10.1088/1748-0221/10/12/P12012},
+   adsurl = {http://adsabs.harvard.edu/abs/2015JInst..10P2012A},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{NOTE145,
+    author  = {{Bonesini}, M.},
+    title   = "{The design of MICE TOF0 detector}",
+    journal = {MICE Note 145},
+    url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0145/MICE0145.pdf}",
+    year = 2006
+}
+
+@article{NOTE241,
+    author={{Bertoni}, R. and others},
+    title = "{The construction and laboratory tests for MICE TOF0/1 detectors}",
+    journal = {MICE Note 241},
+    url    = "{http://mice.iit.edu/micenotes/public/pdf/MICE0241/MICE0241.pdf}",
+    year = 2008
+}
+    
+@ARTICLE{2010NIMPA.615...14B,
+   author = {{Bertoni}, R. and {Blondel}, A. and {Bonesini}, M. and {Cecchet}, G. and 
+	{de Bari}, A. and {Graulich}, J.~S. and {Karadzhov}, Y. and 
+	{Rayner}, M. and {Rusinov}, I. and {Tsenov}, R. and {Terzo}, S. and 
+	{Verguilov}, V.},
+    title = "{The design and commissioning of the MICE upstream time-of-flight system}",
+  journal = {Nuclear Instruments and Methods in Physics Research A},
+archivePrefix = "arXiv",
+   eprint = {1001.4426},
+ primaryClass = "physics.ins-det",
+     year = 2010,
+    month = mar,
+   volume = 615,
+    pages = {14-26},
+      doi = {10.1016/j.nima.2009.12.065},
+   adsurl = {http://adsabs.harvard.edu/abs/2010NIMPA.615...14B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}    
+
+@article{NOTE286,
+    author  = {{Bertoni}, R. and others},
+    title   = "{The construction of the  MICE TOF2 detector}",
+    journal = {MICE Note 286},
+    url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0286/MICE0286.pdf}",
+    year    = 2010
+}
+
+@ARTICLE{Rajaram:2015bra, 
+      author         = "Rajaram, D. and Palladino, V. C.",
+      title          = "{The Status of MICE Step IV}",
+      booktitle      = "{Proceedings, 6th International Particle Accelerator
+                        Conference (IPAC 2015): Richmond, Virginia, USA, May 3-8,
+                        2015}",
+      year           = "2015",
+      url            = "http://accelconf.web.cern.ch/AccelConf/IPAC2015/papers/thpf122.pdf",
+      pages          = "THPF122",
+      reportNumber   = "IPAC-2015-THPF122",
+      SLACcitation   = "%%CITATION = IPAC-2015-THPF122;%%"
+}
+
+@ARTICLE{2015ehep.confE.521B,
+   author = {{Bonesini}, M.},
+    title = "{Progress of the MICE experiment}",
+booktitle = {European Physical Society Conference on High Energy Physics (EPS-HEP2015)},
+     year = 2015,
+archivePrefix = "arXiv",
+   eprint = {1510.08825},
+ primaryClass = "physics.acc-ph",
+      eid = {521},
+    pages = {521},
+   adsurl = {http://adsabs.harvard.edu/abs/2015ehep.confE.521B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{NOTE251,
+   author = {{Karadzhov}, Y. and others},
+    title = "{TOF detectors Time Calibration}",
+  journal = {MICE Note 251},
+    url    = "{http://mice.iit.edu/micenotes/public/pdf/MICE0251/MICE0251.pdf}",
+     year = 2009,
+}
+
+% TOF box-shaped soft iron shieldings 
+%@ARTICLE{d0,
+%   author = {{Stephens}, R. and others},
+%  journal = {D0 collaboration internal note}
+%}
+
+@ARTICLE{2012NIMPA.693..130B,
+   author = {{Bonesini}, M. and {Bertoni}, R. and {de Bari}, A. and {Rossella}, M.
+	},
+    title = "{Behaviour in magnetic fields of fast conventional and fine-mesh photomultipliers}",
+  journal = {Nuclear Instruments and Methods in Physics Research A},
+archivePrefix = "arXiv",
+   eprint = {1207.4909},
+ primaryClass = "physics.ins-det",
+     year = 2012,
+    month = nov,
+   volume = 693,
+    pages = {130-137},
+      doi = {10.1016/j.nima.2012.07.039},
+   adsurl = {http://adsabs.harvard.edu/abs/2012NIMPA.693..130B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@article{NOTE455,
+    author={{Bonesini}, M. and others},
+    title = "{The TOF1 local shielding}",
+    journal = {MICE Note 455},
+    url    = "{http://mice.iit.edu/micenotes/public/pdf/MICE0455/MICE0455.pdf}",
+    year = 2015
+}
