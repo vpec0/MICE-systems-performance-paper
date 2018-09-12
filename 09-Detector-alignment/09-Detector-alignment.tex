@@ -60,7 +60,17 @@ in the first order small angles approximation. The global gradients of the strai
 
 There are six potential unknowns per tracker. Some simplifications can be made to lower the amount of unknowns. The $z_T$ coordinate of each tracker is known to great accuracy from the survey. It may also be shown that the roll of the trackers has negligible influence on the alignment and may be ignored~\cite{2018arXiv1805.06623T}. The beam-based detector alignment is critical to find the $(x_\mathrm{T}, y_\mathrm{T}, \alpha_\mathrm{T}, \beta_\mathrm{T})$ constants for each tracker.
 
-The location of the TOFs is used as the reference for the tracker alignment. The line that joins the centre of TOF1 with the centre of TOF2 is chosen to be the reference axis. A deviation from this axis is considered as a misalignment of the trackers. Multiple scattering in the beam line does not allow to do the alignment on single particle basis but works for a larger sample of particles. The mean residual angles and positions of the trackers with respect to the TOF12 axis are an essential and powerful tool to infer the correction factors.
+The location of the TOFs is used as the reference for the tracker alignment. The line that joins the centre of TOF1 with the centre of TOF2 is chosen to be the reference axis. A deviation from this axis is considered as a misalignment of the trackers. Multiple scattering in the beam line does not allow to do the alignment on single particle basis but works for a larger sample of particles. The mean residual angles and positions of the trackers with respect to the TOF12 axis are an essential and powerful tool to infer the correction factors. Figure~\ref{fig:align_bl} shows the path of a single particle that scatters in the absorber module of the MICE experiment.
+
+\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.95\textwidth]{alignment.pdf}
+	\end{center}
+	\caption{
+		True path of a single particle track (red) and its path as reconstructed from the time-of-flight system (green). The position of the track at the tracker centres is represented by markers.
+	}
+	\label{Fig:AbsorberVessel:BdyPhoto}
+\end{figure}
 
 Each TOF provides a single space point in the global coordinate system $(\xi_i, \upsilon_i, \zeta_i)$ with $i$ the ID of the TOF. This position is assumed to be the true position with a large uncertainty due to the limited granularity of the detector ($\sigma_x\sim\sigma_y\sim17$\,mm). The gradients of the track between the two TOFs are reconstructed as:
 \begin{equation}
@@ -94,7 +104,7 @@ The method described here assumes that the mean residuals can be measured with g
 % --------------------------------------- %
 % ------------------DATA----------------- %
 % --------------------------------------- %
-\subsection{Alignment of the data sample}
+\subsection{Alignment of a data sample}
 \label{SubSect:DA_Data}
 Data is recorded with the superconducting magnetic channel of the experiment turned off, i.e. with tracks going in a straight line from TOF1 to the beam dump. High momentum beams are used in order to reduce the RMS scattering angle and maximize transmission. The settings used correspond to `pion' beams of positive polarity to maximize statistics. The beams exhibit a variety of distributions in the beam line.  An agreement between the independent fits guarantees an unbiased measurement of the alignment constants.
 
