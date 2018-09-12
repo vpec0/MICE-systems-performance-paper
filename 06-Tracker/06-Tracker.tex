@@ -1,35 +1,103 @@
 \graphicspath{{06-Tracker/Figures/}}
 
-\section{Tracker}
+\section{The Trackers}
 \label{Sect:Tracker}
 
 \subsection{Introduction}
-\label{SubSect:Tracker_Intro}
-% Paul Kyberd reviewed this
+MICE is equipped with two identical, high precision scintillating-fibre ("sciFi") trackers, described in [1]. Each tracker is placed in a superconducting solenoid designed to provide a uniform field over the tracking volume. One tracker, TKU, is upstream of the cooling cell, the other, TKD, downstream. Each tracker consists of five detector stations, labelled 1 to 5, with the stations placed varying distances apart to help resolve ambiguities. The trackers are placed symmetrically about the cooling cell, with station 1 the nearest to the cooling cell for both. Each station is formed of three planes of $350\mu m$ scintillating-fibres, orientated at 120 degrees to one another. Each plane consists of two layers. Thefibres in each plane butt up to each other and the two layers are offset with respect to each other by a fibre radius. A charge particle will then deposit energy in at least $350\mu m$ of scintillator, providing uniform response over the whole station face. The doublet layers are glued to a sheet of mylar and the fibres are adjacent groups of seven fibres form one read-out channel. The three views are referred to as U, V and W, with the order being identical for each station and the U fibres running vertically.
+The light from the seven scintillating fibres passes into a single clear fibre, which takes it to a visible light photon counter (VLPC) which operate at 9k. The signal from the VLPCs is digitised using electronics developed by the D0 collaboration[2].
 
-The emittance measurement in MICE is performed by two scintillating fibre trackers, placed upstream and downstream of the cooling channel, which will allow for the change in emittance across the cooling channel to be measured.
 
-The trackers are positioned within the bore of superconducting solenoids used to induce helical motion in the incoming particles, from which position and momentum of the particles can be reconstructed and measured.
-Each tracker is formed by five stations placed at non-equal intervals to minimized the possible degeneracy in the position measurement~Fig.~\ref{fig:TKR}~(left).
-Each station is composed of three planes of doped scintillating fibre of diameter 350~$\mu$, each orientated at 120$^\circ$. The fibres are arranged in doublets as in~Fig.~\ref{fig:TKR}~(right). Scintillation light produced by ionization radiation is readout by visible light photo counters~\cite{ELLIS2011136}.
+\subsection{Tracker Performance and Reconstruction}
 
-\begin{figure}
-  \begin{center}
-    \includegraphics[width=0.49\columnwidth]{./06-Tracker/Figures/TKR1.jpg}
-    \hfill
-    \includegraphics[width=0.49\columnwidth]{./06-Tracker/Figures/TKR2.png}
-    \caption{Photograph of one tracker showing the five stations (left) and cross-section of a tracker plane (right) .}
-    \label{fig:TKR}
-  \end{center}
+\subsubsection{Low Level Analysis}
+Low level analysis including digits, to spacepoints, 2 pages, Melissa U.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=\textwidth,keepaspectratio=true,]{Digits_Up.pdf}
+\end{center}
+\caption{}
+\label{Figure:Digits_Up}
 \end{figure}
 
-The fibres are grouped into channels (seven fibres per channel).
-Regarding the tracker reconstruction, hits in individual channel are combined into cluster formed with the neighbour channel.
-Spacepoints in each plane are then formed from either two or three clusters.
-Spacepoints are associated with individual tracks using a pattern recognition algorithm before a Kalman filter is applied, accounting scattering and energy loss within the tracker.~\cite{NOTE451}.
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[width=\textwidth,keepaspectratio=true,]{Digits_Down.pdf}
+\end{center}
+\caption{}
+\label{Figure:Digits_Down}
+\end{figure}
 
-\subsection{Performance}
-\label{SubSect:Tracker_Performance}
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=\textwidth,keepaspectratio=true,]{Clusters.pdf}
+\end{center}
+\caption{}
+\label{Figure:Clusters}
+\end{figure}
 
-\subsection{Tracker resolution in field}
-\label{SubSect:Tracker_Resolution}
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=\textwidth,keepaspectratio=true,]{SPSeeds10314.png}
+\end{center}
+\caption{[left] The NPE of each spacepoint in the US and DS trackers combined. [Right] only the NPE of those spacepoints which go on to make tracks in the US and DS trackers combined are shown.}
+\label{Figure:SPSeeds_10314}
+\end{figure}
+
+
+\begin{figure}[ht]
+	\centering
+    \begin{tabular}{cc}
+	    \includegraphics[width=0.5\textwidth]{Spacepoint_tripets_Up.pdf} &	
+        \includegraphics[width=0.5\textwidth]{Spacepoint_Doublets_Up.pdf} \\
+    \end{tabular}
+	\caption{\label{SP_US}}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+    \begin{tabular}{cc}
+	    \includegraphics[width=0.5\textwidth]{Spacepoint_tripets_Down.pdf} &	
+        \includegraphics[width=0.5\textwidth]{Spacepoint_Doublets_Down.pdf} \\
+    \end{tabular}
+	\caption{\label{SP_DS}}
+\end{figure}
+
+\subsubsection{Noise}
+Noise at electronics level discussion, 1/2 page, Chris H
+and
+Noise from data, 1/2 page, Chris H
+
+\subsubsection{Track Finding Efficiency}
+Track selection/Kalman, efficiency (from all data runs plotted by pt and if all equal just 10mm can be shown) resolution (from MC), reference MAUS and Tracker SW paper, 1 page, Chris H.
+
+\subsubsection{Track Fit Predicted Performance}
+
+Monte Carlo simulation used with realistic field and beam conditions in order to estimate the reconstruction performance. Run number 09964 was used, representing a typical data set used for the study of emittance evolution.
+
+\begin{figure}[ht]
+	\centering
+    \begin{tabular}{cc}
+	    \includegraphics[width=0.5\textwidth]{upstream_p_bias_p.pdf} &	
+        \includegraphics[width=0.5\textwidth]{upstream_p_resolution_p.pdf} \\
+        \includegraphics[width=0.5\textwidth]{upstream_pt_bias_p.pdf} &
+        \includegraphics[width=0.5\textwidth]{upstream_pt_resolution_p.pdf}
+    \end{tabular}
+	\caption{\label{trackers:performance:resolutions:up}Predicted momentum reconstruction bias (left) and resolution (right) for the longitudinal (top) and transverse (bottom) momentum components in the upstream tracker.}
+\end{figure}
+
+\begin{figure}[ht]
+	\centering
+    \begin{tabular}{cc}
+	    \includegraphics[width=0.5\textwidth]{downstream_p_bias_p.pdf} &	
+        \includegraphics[width=0.5\textwidth]{downstream_p_resolution_p.pdf} \\
+        \includegraphics[width=0.5\textwidth]{downstream_pt_bias_p.pdf} &
+        \includegraphics[width=0.5\textwidth]{downstream_pt_resolution_p.pdf}
+    \end{tabular}
+	\caption{\label{trackers:performance:resolutions:down}Predicted momentum reconstruction bias (left) and resolution (right) for the longitudinal (top) and transverse (bottom) momentum components in the downstream tracker.}
+\end{figure}
+
+
+\subsection{Tracker Efficiency Evolution}
+
+Tracker efficiency with time (maybe 1 runs every 3 months since start shown?), 1/2 page, Paul K.
