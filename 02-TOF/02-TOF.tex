@@ -4,7 +4,7 @@
 \newcommand{\mchange}[2]{{\color{red}#1}{\color{green}#2}}
 \newcommand{\malert}[1]{{\it\color{red}#1}}
 \newcommand{\hilite}[1]{{\it\color{blue}#1}}
-
+\newcommand{\Tzero}{\ensuremath{T0}}
 
 \section{Time-of-Flight Detectors}
 \label{Sect:TOF}
@@ -37,6 +37,11 @@ List of figures
 
 \end{itemize}
 
+
+\malert{Issues:}
+\begin{itemize}
+\item should we use word ``counter'' or ``slab''?
+\end{itemize}
 
 \subsection{Introduction}
 \label{SubSect:TOF_Intro}
@@ -170,7 +175,9 @@ pions fall into three well defined peaks.
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.6\columnwidth]{./02-TOF/Figures/TOF.png}
-    \caption{Time of flight between TOF0 and TOF1 for a ``pion'' beam. From the left: the well separated electron, muon and pion peaks.}
+    \caption{Time of flight between TOF0 and TOF1 for a ``pion''
+      beam. From the left: the well separated electron, muon and pion
+      peaks.}
     \label{fig:TOF3}
   \end{center}
 \end{figure}
@@ -180,6 +187,23 @@ pions fall into three well defined peaks.
   the requirements on the performance. Will need to tell that current
   T-o-F measurement has sufficient resolution, which appears to be
   $\sim$100-120~ps}
+
+
+Error of the time-of-flight measurement is a combination of intrinsic
+resolution of each TOF station and errors in the calibrations of
+individual \malert{scintillation counters}. The total error of t-o-f
+as measured by stations $i$ and $j$ is considered as:
+%
+\begin{equation}
+  \label{eq:tof:err}
+  \sigma_{\text{TOF}_{ij}} = \sqrt{ \sigma^2_{i} + \sigma^2_{j} +
+    \sigma^2_{\text{calib}} } .
+\end{equation}
+
+Individual uncertainties $\sigma_i$ are assumed to be statistically
+uncorrelated. Error of the calibration method, $\sigma_\text{calib}$,
+consists of uncertainties correlated and uncorrelated between the
+stations.
 
 
 \subsection{TEMPORARY - Plots}
@@ -259,35 +283,217 @@ pions fall into three well defined peaks.
 
 
 \subsection{Calibration Method}
+\begin{itemize}
+\item Describe the method. Based on MICE note 251.
 
-Describe the method. Based on MICE note 251.
+\item \malert{TOF NIMA paper says that measured time resolution of the
+    CAEN TDC was 22~ps/count, as opposed to declared 25~ps!}
 
-\malert{TOF NIMA paper says that measured time resolution of the CAEN
-  TDC was 22~ps/count, as opposed to declared 25~ps!}
-
-Some description of the calibration method is also described in the paper.
-
-
-\malert{There's a short description of the method also in Rayner's
-  Thesis, Section 3.2.1 and Appendix B.}
+\item  Some description of the calibration method is also described in the
+  paper.
 
 
-\subsubsection{Time Walk Correction}
+\item  \malert{There's a short description of the method also in Rayner's
+    Thesis, Section 3.2.1 and Appendix B (this is improved method to
+    extract more calibration constants for proper x,y measurements,
+    Rayner claims $\sim$1~cm resolution; our current resolution = slab
+    width / sqrt(12) $\sim 1.2 - 1.7$ ).}
 
-\malert{Fig of a selected PMT TW 2D hist. + Profile + Fit}
-\malert{Fig of residual TW.}
-\malert{Fig of Slab DT before TW correction and after.}
+\end{itemize}
 
+Measurement of time traversal of a particle through a TOF station is
+influenced by several factors at the hardware level. When a particle
+crosses the plastic scintillator, there is a short delay in light
+production. There are often at least two components to the light: the
+first one is fast with a characteristic scintillation time of
+$\sim$1~ns, and second being much slower with characteristic time
+$\sim$10~ns \malert{(double check the times)}. Contribution of each
+component changes with the ionisation density and hence with particle
+type.
+
+After generation, scintillation light propagates to the ends of each
+scintillator slab where it is detected by photomultiplier tubes. The
+light-travel time depends on the distance of the particle crossing
+from the PMT. The length of slabs in TOF0, TOF1, and TOF2 are 40~cm,
+42~cm, and 60~cm, respectively. This translates to about 3~ns, 3.1~ns,
+and 4.4~ns, respectively, as the effective light propagation speed in
+the scintillator was found to be approximately 13.5~cm/ns.
+
+Next delays are introduced by the transit times of each PMT and the
+cable that lead the signal to the electronics. These times are
+specific for each individual PMT channel and needs to be determined
+in dedicated measurements.
+
+The times of each signal of a PMT are measured as times of signal threshold
+crossings in a simple linear discriminator. This introduces bias in
+the measured time dependent on the total charge of the signal, effect
+referred to as time-walk.
+
+Signal times of each channel are recorded in TDC boards. Readout of
+the whole system is triggered by having a signal in TOF1 station. Time of
+the channel that caused the readout is also recorded in each TDC board
+and is used as a reference time. Depending on where the particle
+crosses through TOF1 station, this trigger time will be issued by
+different PMTs, and consequently the reference time will have a bias
+dependent on the position of TOF1 crossing.
+
+The final time measurement in each station determined as an average of
+the times of individual channels. This way, different distance from
+the point of crossing to each side of the scintillator slabs does not
+matter anymore, because the average of the times of the 2 PMTs does
+not depend on it.
+
+Corrections which need to be made to the measured times are then the
+time-walk correction, PMT channel specific delay time $T0$, and
+correction for reference trigger time delay.
+
+
+\subsubsection{Time-walk Correction}
+\begin{itemize}
+\item \malert{Fig of a selected PMT TW 2D hist. + Profile + Fit}
+\item  \malert{Fig of residual TW.}
+\item  \malert{Fig of Slab DT before TW
+    correction and after.}
+\end{itemize}
 Time walk was considered to be constant property of each channel. The
 same correction was used for all runs.
 
+First correction to the measured time of each channel is time-walk
+correction. The correction was determined by looking time difference
+between two selected channels from two crossing slabs.
+
+Correction was first determined for reference slabs, middle slabs in
+each plane. Pixel corresponding to their crossing was always well
+populated with particles crossing it which provided large statistics
+to limit the charge in one of the slabs to a small region around its
+maximum and to use it as reference time which was little affected by
+the time walk. Time walk of PMTs in the other slab could easily by
+determined from the measured time with respect to the limited
+reference channel.
+
+After provisional determination of time-walk of the reference slabs,
+time-walk of all the PMT channels was determined by looking at events
+in pixels corresponding to the crossing with the reference slab.
+
+A time-walk correction curve was fitted to the data. First, a profile
+was created and then function
+%
+\begin{equation}
+  \newcommand{\ADC}{\text{ADC}}
+  \label{eq:twf}
+  f(\ADC) = P_1 + \frac{P_2}{\ADC - P_0} + \frac{P_3}{\left(\ADC - P_0\right)^2}.
+\end{equation}
+%
+Where possible, parameter $P_3$ was fixed to 0. For some PMTs such fit
+would not follow the measured trend and the additional parameter was
+added to the fit.
+
+
+Example of time-walk in a reference channel after the first round of
+reference calibrations is in Figure~X. Example of time walk of a
+channel with respect to pre-corrected time in a reference slab is
+shown in Figure~Y.
+
+Figure~Z shows distributions of time differences between horizontal
+slab 4 and vertical slab 5 before and after time walk correction. The
+width of the distribution is significantly decreased. The mean of the
+distribution is not centered at 0 as differences in delays \Tzero{} due to
+individual PMTs and their cables were not accounted for, yet.
 
 \subsubsection{Trigger Delay Correction}
+\newcommand{\Tdelay}[2]{\ensuremath{T_{\text{tr}}^{#1,#2}}}
 
+Station TOF1 was used to trigger readout of the whole system. Time of
+it's trigger signal was used as a reference signal to which times of
+each channel of all 3 stations were measured. Two-fold coincidence of signals
+crossing threshold in PMTs on both sides of a slab is required.
+%
+For an incoming particle the trigger signal is given by the first of
+the twofold coincidences from slab i and slab k. The time of the
+coincidence signal is the time of the latest signal arriving to the
+logic unit.
+%
+Which PMT channel will be causing trigger depends on the position
+within the slab of the particle crossing and the \Tzero{} delays of
+individual PMTs. Assuming that light arrival time does not change
+significantly across a pixel and no other effects influence signal
+arrival one can expect that passage of a particle through a given
+pixel causes always the same time sequence of PMT signals and the
+delay of the trigger signal will be that of one particular channel in
+each pixel. This assumption, however, does not hold for all
+pixels. The main reason being the time walk effect which biases each
+channel differently and in some pixels results in more than 1 PMT
+channel generating the trigger signal.
 
-\subsubsection{T0 Correction}
+The trigger signal delay of each pixel was measured relative to the
+central pixel of TOF1 station. Times of each PMT were corrected for
+time walk first. Mean times of PMTs in reference slabs, horizontal
+slab 3 and vertical slab 3, were compared for each pixel.
 
+\newcommand{\TW}{\ensuremath{\text{TW}}}
+\newcommand{\PMT}{\ensuremath{\text{PMT}}}
+${t_\TW}_{i,j}^\PMT$
 
+{
+\newcommand{\ttrig}[3]{\ensuremath{{t_\TW}_{#2,#3}^{#1}}}
+\newcommand{\mean}[1]{\ensuremath{\left< #1 \right>}}
+\begin{align}
+  %\label{eq:trigdel}
+  &\frac12\sum_{\PMT}
+    \mean{\ttrig{\PMT}{3}{j}} -
+    \mean{\ttrig{\PMT}{3}{3}} \label{eq:trigdel:horiz} \\
+  &\frac12\sum_{\PMT}
+    \mean{\ttrig{\PMT}{i}{3}} -
+    \mean{\ttrig{\PMT}{3}{3}} \label{eq:trigdel:vert} \\
+  &\frac14\sum_{\PMT}
+    \left(
+    \mean{\ttrig{\PMT}{i}{j}} - \mean{\ttrig{\PMT}{i}{3}} +
+    \mean{\ttrig{\PMT}{i}{j}} - \mean{\ttrig{\PMT}{i}{3}}
+    \right) \label{eq:trigdel:both}
+\end{align}
+}
+
+For pixels not defined by the reference slabs, we can compare
+estimated delay times \Tdelay{i\neq3}{j\neq3} arrived to from the
+vertical and horizontal reference slab, 1st and 2nd part of Equation
+(\ref{eq:trigdel:both}), respectively.
+
+Figure~X shows comparison of time-walk corrected recorded times in a
+channel for particles passing through different pixels. The variation
+in position of the peaked distributions is clearly visible.
+
+Figure~Y shows times measured in a channel in TOF0 station for
+particles crossing the station's central pixel (4,5). Times
+before correction for the trigger signal delay are compared to times
+after the correction.
+
+\subsubsection{$T0$ Correction}
+
+Times in each channel were corrected for the channel specific delays
+caused by each PMT and by cable lengths. The correction was extracted
+from channel times corrected for time walk and trigger signal
+delay. After that, TOF1 stations' times differ only by the channel
+specific delays. Constant offests were applied such that time distributions
+in TOF1 were centered at 0.
+
+Times in TOF0 and TOF2 stations reflected the time of flight of
+individual particles to and from TOF1 and the channel delays
+\Tzero. Distribution of the times in those station show 3-peaked
+structure, where the most isolated peak at lowest tome-of-flight
+corresponds to electrons in the beam which travel at speed of
+light. Their time of flight was calculated from distances from TOF1
+station, 8.XX~m and 8.xx~m for TOF0 and TOF1, respectively. Figure~Y
+shows position of the electron peak in one channel of TOF0 before and
+after the last correction. Right hand side of the figure compares
+time distribution of all channels before and after the correction.
+
+Due to the presence of focusing fields in the beam-line section
+between TOF0 and TOF1 stations, particles did not travel in a straight
+line in that section. Deviation from a straight line was dependent on
+the initial direction and momentum of the particles entering the
+section. The effect was estimated \malert{\cite{RAYNER}} in
+simulations to be of an order of $\sim$30~ps. This effect caused a
+small bias in the calibrations.
 
 
 
@@ -307,7 +513,20 @@ same correction was used for all runs.
   it was reconstructed from.
 \end{itemize}
 
+Recorded signals in all PMT channels are processed in the following
+way. First, signals in opposite PMTs of a slab are paired. Recorded
+times are corrected for time walk, channel delay \Tzero{}, and for the
+delay of the trigger signal. This requires that the trigger pixel in
+TOF1 station is determined.
 
+Pixel area where the particle crossed the station is searched by
+attempting to match all possible combinations of slab signals in each
+plane. Transverse slabs are matched if their corrected times fall
+within a 4-ns window. A space point is then created with spatial
+coordinates centered at centre of the pixel in the transversal
+direction and middle of the station in the longitudinal
+direction. Time of the space point is calculated as an average of the
+times of each slab.
 
 
 \subsection{Performance}
@@ -343,6 +562,7 @@ Figures to show here:
       slab hits recorded)
     \end{itemize}
   \end{itemize}
+\item Stability of electron peak - run by run position of electron peak!
 \item particle detection efficiency - how to show?
 \item Resolution
   \begin{itemize}
