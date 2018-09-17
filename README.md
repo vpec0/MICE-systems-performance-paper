@@ -9,3 +9,8 @@ v0.2: first contributions
       - Tracker: plots and text
       - KL: plots and text
       - LH2 absorber: text and figures
+v0.3: more contributions
+      - TOF: text draft
+      - EMR: two sections
+      - Detector alignemnt: first full draft
+      
