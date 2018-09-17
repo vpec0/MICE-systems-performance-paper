@@ -1,14 +1,45 @@
 \begin{quotation}
+\begin{center}
+\textbf{Abstract}
+\end{center}
   \noindent
   This paper will describe:
   \begin{itemize}
     \item The detectors as we have it installed in the MICE Hall at November 2017
-    \item The performances of the detectors 
-    \item The absorbers models and their validation
+    \item The performances of the detectors and the PID
+    \item The absorbers model(s) and their validation
     \item The track matching
+    \item The detector alignment
   \end{itemize}
 \end{quotation}
-We'll make reference to the published papers wherever possible.
 
 \noindent
-We're targeting the JINST volume.
+
+Reference to the published papers.
+Target: JINST volume.
+
+\begin{table}[!ht]
+  \caption{Status of the paper}
+  \label{tab:}
+
+  \begin{center}
+    \begin{tabular}{c|c|c}
+        \hline
+       Contribution         & Plots             & Text\\
+       \hline
+       TOF                  & First version     & First version \\
+       Cherenkov            & No                & Introduction \\
+       KL                   & Yes               & First version \\
+       EMR                  & First version     & Two sections \\
+       Tracker              & Some              & Introduction \\
+       PID                  & No                & No \\
+       Track matching       & First version     & first version \\
+       Detector alignment   & Yes               & First version \\
+       Magnets              & No                & No \\
+       Target model         & No                & No \\
+       Absorber model       & No                & Introduction \\
+       
+       \hline
+    \end{tabular}
+  \end{center}
+\end{table}
