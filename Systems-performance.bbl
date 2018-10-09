@@ -1,0 +1,104 @@
+\providecommand{\href}[2]{#2}\begingroup\raggedright\begin{thebibliography}{10}
+
+\bibitem{NOTE145}
+M.~{Bonesini}, ``{The design of MICE TOF0 detector},'' {\em MICE Note 145}
+  (2006) .
+  \url{{http://mice.iit.edu/micenotes/public/pdf/MICE0145/MICE0145.pdf}}.
+
+\bibitem{NOTE241}
+R.~{Bertoni} {\em et al.}, ``{The construction and laboratory tests for MICE
+  TOF0/1 detectors},'' {\em MICE Note 241} (2008) .
+  \url{{http://mice.iit.edu/micenotes/public/pdf/MICE0241/MICE0241.pdf}}.
+
+\bibitem{2010NIMPA.615...14B}
+R.~{Bertoni}, A.~{Blondel}, M.~{Bonesini}, G.~{Cecchet}, A.~{de Bari}, J.~S.
+  {Graulich}, Y.~{Karadzhov}, M.~{Rayner}, I.~{Rusinov}, R.~{Tsenov},
+  S.~{Terzo}, and V.~{Verguilov}, ``{The design and commissioning of the MICE
+  upstream time-of-flight system},''
+  \href{http://dx.doi.org/10.1016/j.nima.2009.12.065}{{\em Nuclear Instruments
+  and Methods in Physics Research A} {\bfseries 615} (Mar., 2010) 14--26},
+  \href{http://arxiv.org/abs/1001.4426}{{\ttfamily arXiv:1001.4426
+  [physics.ins-det]}}.
+
+\bibitem{NOTE286}
+R.~{Bertoni} {\em et al.}, ``{The construction of the MICE TOF2 detector},''
+  {\em MICE Note 286} (2010) .
+  \url{{http://mice.iit.edu/micenotes/public/pdf/MICE0286/MICE0286.pdf}}.
+
+\bibitem{Rajaram:2015bra}
+D.~Rajaram and V.~C. Palladino, ``{The Status of MICE Step IV},''.
+\url{http://accelconf.web.cern.ch/AccelConf/IPAC2015/papers/thpf122.pdf}.
+%%CITATION = IPAC-2015-THPF122;%%.
+
+\bibitem{2015ehep.confE.521B}
+M.~{Bonesini}, ``{Progress of the MICE experiment},''
+  \href{http://arxiv.org/abs/1510.08825}{{\ttfamily arXiv:1510.08825
+  [physics.acc-ph]}}.
+
+\bibitem{2013arXiv1306.1509T}
+{The MICE Collaboration}, ``{Characterisation of the muon beams for the Muon
+  Ionisation Cooling Experiment},'' {\em ArXiv e-prints} (June, 2013) ,
+  \href{http://arxiv.org/abs/1306.1509}{{\ttfamily arXiv:1306.1509
+  [physics.acc-ph]}}.
+
+\bibitem{2016JInst..11P3001A}
+D.~{Adams} {\em et al.}, ``{Pion contamination in the MICE muon beam},''
+  \href{http://dx.doi.org/10.1088/1748-0221/11/03/P03001}{{\em Journal of
+  Instrumentation} {\bfseries 11} (Mar., 2016) P03001},
+  \href{http://arxiv.org/abs/1511.00556}{{\ttfamily arXiv:1511.00556
+  [physics.ins-det]}}.
+
+\bibitem{NOTE251}
+Y.~{Karadzhov} {\em et al.}, ``{TOF detectors Time Calibration},'' {\em MICE
+  Note 251} (2009) .
+  \url{{http://mice.iit.edu/micenotes/public/pdf/MICE0251/MICE0251.pdf}}.
+
+\bibitem{2012NIMPA.693..130B}
+M.~{Bonesini}, R.~{Bertoni}, A.~{de Bari}, and M.~{Rossella}, ``{Behaviour in
+  magnetic fields of fast conventional and fine-mesh photomultipliers},''
+  \href{http://dx.doi.org/10.1016/j.nima.2012.07.039}{{\em Nuclear Instruments
+  and Methods in Physics Research A} {\bfseries 693} (Nov., 2012) 130--137},
+  \href{http://arxiv.org/abs/1207.4909}{{\ttfamily arXiv:1207.4909
+  [physics.ins-det]}}.
+
+\bibitem{NOTE455}
+M.~{Bonesini} {\em et al.}, ``{The TOF1 local shielding},'' {\em MICE Note 455}
+  (2015) .
+  \url{{http://mice.iit.edu/micenotes/public/pdf/MICE0455/MICE0455.pdf}}.
+
+\bibitem{NOTE473}
+L.~{Cremaldi} {\em et al.}, ``{Progress on Cherenkov Reconstruction in MICE},''
+  {\em {MICE Note 473}} (2015) .
+  \url{{http://mice.iit.edu/micenotes/public/pdf/MICE0473/MICE0473.pdf}}.
+
+\bibitem{2016JInst..11T10007}
+R.~{Asfandiyarov} {\em et al.}, ``{The design and construction of the MICE
+  Electron-Muon Ranger},''
+  \href{http://dx.doi.org/10.1088/1748-0221/11/10/T10007}{{\em Journal of
+  Instrumentation} {\bfseries 11} (Oct., 2016) T10007},
+  \href{http://arxiv.org/abs/1607.04955}{{\ttfamily arXiv:1607.04955
+  [physics.ins-det]}}.
+
+\bibitem{Drielsma:2017doj}
+F.~Drielsma, ``{Electron-Muon Ranger: hardware characterization},'' Master's
+  thesis, University of Geneva, 2014.
+\newblock \url{https://arxiv.org/abs/1710.06946}.
+
+\bibitem{2015JInst..10P2012A}
+D.~{Adams} {\em et al.}, ``{Electron-muon ranger: performance in the MICE muon
+  beam},'' \href{http://dx.doi.org/10.1088/1748-0221/10/12/P12012}{{\em Journal
+  of Instrumentation} {\bfseries 10} (Dec., 2015) P12012},
+  \href{http://arxiv.org/abs/1510.08306}{{\ttfamily arXiv:1510.08306
+  [physics.ins-det]}}.
+
+\bibitem{Drielsma:thesis}
+F.~Drielsma, {\em Measurement of the Increase in Phase Space Density of a Muon
+  Beam through Ionization Cooling}.
+\newblock PhD thesis, University of Geneva, 10, 2018.
+
+\bibitem{2018arXiv1805.06623T}
+F.~Drielsma, ``{Beam-based detector alignment in the MICE muon beam line},''
+  \href{http://arxiv.org/abs/1805.06623}{{\ttfamily arXiv:1805.06623
+  [physics.ins-det]}}. \url{https://arxiv.org/abs/1805.06623}.
+
+\end{thebibliography}\endgroup
