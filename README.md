@@ -13,4 +13,4 @@ v0.3: more contributions
       - TOF: text draft
       - EMR: two sections
       - Detector alignemnt: first full draft
-      
+v0.3.1: full EMR section from Francois      
