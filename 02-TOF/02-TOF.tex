@@ -49,7 +49,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Introduction}
 \label{SubSect:TOF_Intro}
-% version 01 edited by Maurizio Bonesini 19/2/2018
+% version 0.1 edited by Maurizio Bonesini 19/2/2018
+% version 0.2 edited 23/10/2018
 
 Three time-of-flight detectors (TOF0, TOF1, TOF2) were built and
 installed at RAL in 2008 and 2009 to measure the position and the time
@@ -60,17 +61,25 @@ downstream of the channel, mounted in front of the KL, as shown
 in~Fig.~\ref{fig:BL}.  The time of flight between two TOF stations
 provides particle identification information and can also be used for
 momentum measurement. TOF1 served most of the time also as an
-experimental trigger.  They operated smoothly during the so-called
+experimental trigger. They operated smoothly during the so-called
 Step~I and Step~IV~\cite{Rajaram:2015bra},~\cite{2015ehep.confE.521B}
 running periods of the MICE experiment and were essential for all the
 measurements done.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \includegraphics[width=0.8\columnwidth]{BL.png}
+    \caption{MICE experiment in the demo configuration, showing the full beam line and cooling channel elements with all the detectors.}
+    \label{fig:BL}
+  \end{center}
+\end{figure}
 
 The good performances of the TOF detectors, over an extended period of time,
 enabled the MICE experiment to characterize fully its muon beams during
 Step~I data-taking, by measuring their emittance~\cite{2013arXiv1306.1509T} and
 assessing their pion contamination~\cite{2016JInst..11P3001A}.
 
-Each TOF station was made of two planes of fast~1'' thick scintillator
+Each TOF station was made of two planes of fast~1''~thick scintillator
 bars oriented along X and Y directions, respectively. The bars were
 made of BC404 plastic scintillator\footnote{Emission maximum at
   $408$~nm, decay time $1.8$~ns, attenuation length $160~cm$}. A
@@ -91,7 +100,7 @@ slab.
   \centering
   \includegraphics[width=5cm]{tof_diagram}
   \includegraphics[width=5cm]{slab_design}
-  \caption{TOF design [Rayner's thesis] and slab components [MICE0241]}
+  \caption{TOF design~\cite{Rayner:2011zz} and slab components~\cite{NOTE241}.}
   \label{fig:tof:schematic}
 \end{figure}
 
@@ -108,20 +117,18 @@ V1290 TDC for time measurements. Second half of the signal goes to
 CAEN V1724 FADC for pulse-height measurements. Pulse height
 measurement is instrumental for time-walk corrections. Each station
 issued a local readout trigger if signals in both PMTs attached to a
-slab crossed a specific threshold. All 3 stations were read out when
+slab crossed a specific threshold. All three stations were read out when
 TOF1 station issued a local trigger. This readout trigger was also
 used for the rest of the MICE detector systems.
 
 % Pulse heights and times of the signals
 % were recorded if
 
-
-
-\malert{Do we want to include this?:}
- As reported in
-reference~\cite{NOTE241}, RG213 cables\footnote{CERN type C-50-6-1,
-  with rated delay 4.08 ns/m} have a better temperature stability than
-conventional RG58 cables.
+%\malert{Do we want to include this?:}
+% As reported in
+%reference~\cite{NOTE241}, RG213 cables\footnote{CERN type C-50-6-1,
+%  with rated delay 4.08 ns/m} have a better temperature stability than
+%conventional RG58 cables.
 
 % \malert{Unnecessary: Their delay have been individually measured
 % in laboratory, before installation in the experimental hall.  Time
@@ -129,53 +136,56 @@ conventional RG58 cables.
 % particles by using the detector X/Y
 % redundancy~\cite{NOTE251}. }
 
-All 3 stations were exposed to residual magnetic fields. TOF0 station
-was placed in a relatively low residual field ($\le 50~\Gauss$)
-produced by the last quadrupole magnet of the beam line.  The PMTs in
-this station used 1-mm thick $\mu$-metal shielding \malert{(we don't
-  seem to have any reference)}. The other two TOF stations (TOF1/TOF2)
-were exposed to the stray fields of the cooling channel solenoids that
-were only partially shielded by 100~mm thick annular iron plates
-\malert{(need to have a reference, possibly described earlier in the
-  paper)}. The residual magnetic fields were up to 0.13~T (with a
-component along the PMTs axis up to 0.04~T). Box-shaped soft iron
-shielding is more effective than cylindrical one. This idea,
-pioneered in the D0 experiment \malert{(citation needed, or remove altogether)}, has been
-tested in the case of MICE using different geometrical configurations
-of the iron shielding boxes and different iron materials (e.g. Fe360,
-ARMCO\footnote{ARMCO steel from AkSteel is a pure iron with a maximal
-  carbon content of $0.025\%$ and very high magnetic
-  saturation},~etc) \cite{2012NIMPA.693..130B}.
+All stations were exposed to residual magnetic fields: TOF0 station was placed in a relatively low residual field produced by the last quadrupole magnet of the beam line, while the other two TOF stations were exposed to the stray fields of the cooling channel solenoids. A shielding structure was adopted covering all PMTs at each side of the stations. Fig.~\ref{fig:TOF2} shows photographs from the assembly of the TOF2 station at INFN MIB, taken from \cite{NOTE286}.
+
+%All three stations were exposed to residual magnetic fields. TOF0 station
+%was placed in a relatively low residual field ($\le 50~\Gauss$)
+%produced by the last quadrupole magnet of the beam line.  The PMTs in
+%this station used 1-mm thick $\mu$-metal shielding \malert{(we don't
+%  seem to have any reference)}. The other two TOF stations (TOF1/TOF2)
+%were exposed to the stray fields of the cooling channel solenoids that
+%were only partially shielded by 100~mm thick annular iron plates
+%\malert{(need to have a reference, possibly described earlier in the
+%  paper)}. The residual magnetic fields were up to 0.13~T (with a
+%component along the PMTs axis up to 0.04~T). Box-shaped soft iron
+%shielding is more effective than cylindrical one.
+
+% too much about the shielding, removed.
+%This idea, pioneered in the D0 experiment \malert{(citation needed, or remove altogether)}, has been
+%tested in the case of MICE using different geometrical configurations
+%of the iron shielding boxes and different iron materials (e.g. Fe360,
+%ARMCO\footnote{ARMCO steel from AkSteel is a pure iron with a maximal
+%  carbon content of $0.025\%$ and very high magnetic
+%  saturation},~etc) \cite{2012NIMPA.693..130B}.
 % Systematic studies were
 % performed~\cite{2012NIMPA.693..130B} and
-A composite structure of the shielding was adopted. The first layer of
-the shielding consisted of 1~mm $\mu$-metal around the Hamamatsu
-H6533Mod assemblies. The second layer was an additional box-shaped
-ARMCO bulk with a borehole of 3.2~cm in diameter~\cite{NOTE455} for
-each PMT. A single-bar-like structure was used to shield all PMTs at
-each side of the station. The bars were 15~cm deep, and 5.7~cm or
-6.6~cm thick for TOF1 or TOF2, respectively.  \malert{(Original text
-  stated 6$\times$6~cm$^2$ anfd 5.6$\times$5.6~cm$^2$, 15~cm
-  long. This is with contradiction with the design drawings in MICE
-  note 455 (TOF1) and the drawing provided in this paper (TOF2))}
-Fig.~\ref{fig:TOF1} shows the design drawing of the shielding at the
-TOF2 station detailing individual parts. There was an extra shielding
-effect due to the fact that all bars of the TOF2 PMTs were
-magnetically linked together and also linked to both the KL shielding
-and the shielding plate \malert{(which shielding plate)} making a
-single magnetic loop.
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=9cm,angle=-90]{./02-TOF/Figures/TOF2.eps} \\
-  \caption{Exploded view of the TOF2 detector magnetic shielding for
-    one row of PMTs. Visible are different pieces of ARMCO shielding
-    and the plastic holder and end-caps (left) for mounting the bases of
-    individual PMTs.}
-  \label{fig:TOF1}
-  \end{center}
-\end{figure}
-Fig.~\ref{fig:TOF2} shows photographs from the assembly of the TOF2
-station at INFN MIB, taken from \cite{NOTE286}.
+%A composite structure of the shielding was adopted. The first layer of
+%the shielding consisted of 1~mm $\mu$-metal around the Hamamatsu
+%H6533Mod assemblies. The second layer was an additional box-shaped
+%ARMCO bulk with a borehole of 3.2~cm in diameter~\cite{NOTE455} for
+%each PMT. A single-bar-like structure was used to shield all PMTs at
+%each side of the station. The bars were 15~cm deep, and 5.7~cm or
+%6.6~cm thick for TOF1 or TOF2, respectively.  \malert{(Original text
+%  stated 6$\times$6~cm$^2$ anfd 5.6$\times$5.6~cm$^2$, 15~cm
+%  long. This is with contradiction with the design drawings in MICE
+%  note 455 (TOF1) and the drawing provided in this paper (TOF2))}
+%Fig.~\ref{fig:TOF1} shows the design drawing of the shielding at the
+%TOF2 station detailing individual parts. There was an extra shielding
+%effect due to the fact that all bars of the TOF2 PMTs were
+%magnetically linked together and also linked to both the KL shielding
+%and the shielding plate \malert{(which shielding plate)} making a
+%single magnetic loop.
+%\begin{figure}
+%  \begin{center}
+%  \includegraphics[width=9cm,angle=-90]{./02-TOF/Figures/TOF2.eps} \\
+%  \caption{Exploded view of the TOF2 detector magnetic shielding for
+%    one row of PMTs. Visible are different pieces of ARMCO shielding
+%    and the plastic holder and end-caps (left) for mounting the bases of
+%    individual PMTs.}
+%  \label{fig:TOF1}
+%  \end{center}
+%\end{figure}
+
 \begin{figure}
   \begin{center}
   \includegraphics[width=0.24\columnwidth]{./02-TOF/Figures/TOF_assembly_a.png}
@@ -218,17 +228,15 @@ station at INFN MIB, taken from \cite{NOTE286}.
 %   T-o-F measurement has sufficient resolution, which appears to be
 %   $\sim$100-120~ps}
 
-
-The purpose of the TOF system is to effectively discriminate particle
-ID based on time-of-flight measurement. The main components in the
+The purpose of the TOF system is to effectively discriminate particle species
+based on time-of-flight measurement. The main components in the
 MICE beam are muons, pions, and electrons. The time resolution needs
 to be sufficiently good to effectively discriminate between these
 types. At 240~MeV/c, the time-of-flight difference between muon and
 pion is about 1.3~ns between TOF0 and TOF1 stations. With 200~ps
 resolution, one reaches near $100\%$ discrimination efficiency.
 
-The following text describes the method used to calibrate the TOF
-system and its performance.
+%The following text describes the method used to calibrate the TOF system and its performance.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -503,7 +511,7 @@ Due to the presence of focusing fields in the beam-line section
 between TOF0 and TOF1 stations, particles did not travel in a straight
 line in that section. Deviation from a straight line was dependent on
 the initial direction and momentum of the particles entering the
-section. The effect was estimated \malert{\cite{RAYNER}} in
+section. The effect was estimated~\cite{Rayner:2011zz} in
 simulations to be of an order of $\sim$30~ps. This effect caused a
 small bias in the calibrations.
 
