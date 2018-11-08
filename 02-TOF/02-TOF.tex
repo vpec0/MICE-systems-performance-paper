@@ -69,7 +69,7 @@ measurements done.
 \begin{figure}[!ht]
   \begin{center}
     \includegraphics[width=0.8\columnwidth]{BL.png}
-    \caption{MICE experiment in the demo configuration, showing the full beam line and cooling channel elements with all the detectors.}
+    \caption{MICE experiment in the Step~IV configuration, showing the full beam line and cooling channel elements with all the detectors.}
     \label{fig:BL}
   \end{center}
 \end{figure}
@@ -109,7 +109,6 @@ The stations TOF0, TOF1, and TOF2 had active areas of
 respectively.  Each of the planes in TOF0 station had 10 4-cm wide
 scintillator slabs. Stations TOF1 and TOF2 used 7 and
 10 in each plane, respectively.
-
 The PMTs are connected to a $50\%-50\%$ passive splitter using
 $\sim$34~m long RG213 signal cable. One half of the signal is fed to
 the leading-edge CAMAC Lecroy 4115 discriminator followed by CAEN
@@ -236,10 +235,10 @@ types. At 240~MeV/c, the time-of-flight difference between muon and
 pion is about 1.3~ns between TOF0 and TOF1 stations. With 200~ps
 resolution, one reaches near $100\%$ discrimination efficiency.
 
-%The following text describes the method used to calibrate the TOF system and its performance.
-
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%The following text describes the method used to calibrate the TOF system and its performance.
+
 \subsection{Calibration Method}
 % \begin{itemize}
 % \item Describe the method. Based on MICE note 251.
@@ -352,12 +351,12 @@ effect of time walk after the correction is also shown.
 
 \begin{figure}
   \begin{center}
-  \includegraphics[clip,trim=0 8.5cm 10cm 0, width=8cm]{01_tw_example}
-  \includegraphics[width=8cm]{03_residual_tw_example} \\
+  \includegraphics[width=0.40\columnwidth]{01_tw_example}
+  \includegraphics[width=0.45\columnwidth]{03_residual_tw_example} \\
   \caption{Time walk (left) in PMT 0 of slab 4 in plane 0 (horizontal)
     of station TOF0. The 2D histogram (coloured scale) is overlaid
     with its profile and with the fit function described in
-    Equation~(\ref{eq:twf}).  Residual time walk (right) after the
+    Eq.~\ref{eq:twf}.  Residual time walk (right) after the
     correction was applied.  }
   \label{fig:TW}
   \end{center}
@@ -373,7 +372,7 @@ differences in delays \Tzero{} were not accounted for, yet.
 
 \begin{figure}
   \begin{center}
-  \includegraphics[clip,trim=0 0 10cm 8.5cm, width=9cm]{02_slab_dt_resolution_tw_effect}
+  \includegraphics[width=0.5\columnwidth]{02_slab_dt_resolution_tw_effect}
   \caption{Distribution of time differences \DT{} between horizontal slab 4 and
     vertical slab 5 in station TOF0. Distribution before and after the
   time-walk correction are overlaid.}
@@ -517,7 +516,7 @@ small bias in the calibrations.
 
 \begin{figure}[!ht]
   \centering
-  \includegraphics[width=8cm]{04_tof0_corrected_vs_uncorrected}
+  \includegraphics[width=0.8\columnwidth]{04_tof0_corrected_vs_uncorrected}
   \caption{Example of time distribution of events in TOF0. Times
     before any corrections are compared to to times with all
     corrections applied.}
@@ -618,7 +617,7 @@ respectively.
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=15cm]{05_slab_dt_offset_by_pixel_2d} \\
+  \includegraphics[width=0.9\columnwidth]{05_slab_dt_offset_by_pixel_2d} \\
   \caption{Offsets in slab \DT{} for individual pixels for all 3 stations.}
   \label{fig:SlabDToffsetByPixel}
   \end{center}
@@ -627,7 +626,7 @@ respectively.
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=15cm]{06_slab_dt_resolution_by_pixel_2d} \\
+  \includegraphics[width=0.9\columnwidth]{06_slab_dt_resolution_by_pixel_2d} \\
   \caption{Spread in the slab \DT{} distributions of each pixel.}
   \label{fig:SlabDTresByPixel}
   \end{center}
@@ -641,7 +640,7 @@ having the largest spread.
 
 \begin{figure}
   \begin{center}
-  \includegraphics[width=15cm]{07_overall_slab_dt} \\
+  \includegraphics[width=0.9\columnwidth]{07_overall_slab_dt} \\
   \caption{Overall slab \DT{} distributions. Total width of the
     distribution is due to the resolution of individual pixels and due to
     the offsets in their \DT{} distributions.}
@@ -683,7 +682,7 @@ particle crossings with giving signal in one slab only.
 
 \begin{figure}[!htb]
   \begin{center}
-  \includegraphics[width=15cm]{08_sp_eff_by_pixel_2d} \\
+  \includegraphics[width=0.9\columnwidth]{08_sp_eff_by_pixel_2d} \\
   \caption{Efficiency of space point creation if there were hits in
     two transverse slabs.}
   \label{fig:SpEffByPixel}

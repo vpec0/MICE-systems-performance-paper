@@ -1,6 +1,6 @@
 \graphicspath{{11-Absorber/Figures/}}
 
-\section{Absorber}
+\section{Liquid Hydrogen Absorber}
 \label{Sect:Absorber}
 As a muon beam passes through material, some of the kinetic energy
 of the muons is lost through ionization of the material.
@@ -289,7 +289,50 @@ was measured to be $178 \pm 6\,{\rm (stat)} \pm 4\,{\rm (fit)}$\,$\mu$m.
 
 \subsection{Validation of the absorber model in MAUS}
 \label{SubSect:Absorber_Validation}
+
+As a test of the absorber model, an analysis has been performed to measure the muon energy loss in the LiH and liquid Hydrogen absorbers and compare it to the energy loss predicted by the MC.  A previous analysis measured this effect using only the TOF detectors~\cite{rhys_thesis} and found good agreement in the mean energy loss, but did not have the precision to measure the shape of the distribution.  In this updated energy loss analysis, the addition of the trackers allows better PID, slightly improved momentum measurements upstream compared to the TOF0-TOF1 measurement, and significantly improved momentum measurements downstream compared to the TOF1-TOF2 estimate.
+
+Muons are selected using the particle ID described in Section~\ref{Sect:PID}.  The muons' upstream momentum (before the absorber) is measured using an average of the momentum measured by the tracker (at the plane nearest to the absorber) and the momentum calculated using the TOF0 to TOF1 flight time.  This average is weighted by the expected resolution of the two measurements. (The resolutions are roughly the same for low-momentum muons, but the TOF measurement of momentum is less accurate for higher-momentum muons.)  The muons' downstream momentum is measured solely using the dowstream tracker.
+
+The momentum change is measured for each beam momentum both with and without an absorber present.  The LiH `empty' measurement is done with no absorber present, while the liquid Hydrogen `empty' measurement is done with the hydrogen vessel in place, but not filled.  The measurement with no absorber is used to find the resolution of the detector, and the measurement with a full absorber should then be a convolution of the true loss in the absorber and this resolution.
+
+In order to extract the true momentum loss in the absorber, the `empty absorber' result is modeled by a gaussian distribution.  The `full absorber' measurement is then fit to a convolution of a the true momentum loss (a landau distribution with free parameters) and the resolution of the detector (a gaussian distibution with parameters fixed by the `empty absorber' fit).
+
+\begin{figure}
+\includegraphics[width=0.45\textwidth]{11-Absorber/Figures/raw_140.pdf}\hfil
+\includegraphics[width=0.45\textwidth]{11-Absorber/Figures/deconv_140.pdf}
+\vspace{-5cm}
+
+\includegraphics[width=0.45\textwidth]{11-Absorber/Figures/raw_170.pdf}\hfil
+\includegraphics[width=0.45\textwidth]{11-Absorber/Figures/deconv_170.pdf}
+\vspace{-5cm}
+
+\includegraphics[width=0.45\textwidth]{11-Absorber/Figures/raw_200.pdf}\hfil
+\includegraphics[width=0.45\textwidth]{11-Absorber/Figures/deconv_200.pdf}
+\vspace{-5cm}
+
+\includegraphics[width=0.45\textwidth]{11-Absorber/Figures/raw_240.pdf}\hfil
+\includegraphics[width=0.45\textwidth]{11-Absorber/Figures/deconv_240.pdf}
+\caption{\label{fig:eloss_data} The measured momentum loss (left) and deconvolved distributions (right) in the MICE Lithium Hydride absorber.  Four different momentum settings are shown: 140 MeV(a), 170 MeV(b), 200 MeV(c), and 240 MeV(d).  The `deconvolved' plots show the data (black points), the fitted convolved landau and gaussian (solid blue line) and the landau by itself (dotted blue line).}
+\end{figure}
+
+The measurement of momentum loss is taken at four different beam momenta.  It agrees well with the Monte Carlo (in which the energy loss is modeled by GEANT) and with the predictions of the Bethe-Bloch formula, as shown in Figure~\ref{fig:eloss_bb}.
+
+{\color{red}
+\begin{itemize}
+\item add LH2 plots
+\item systematics
+\item more words about comparing with MC and Bethe-Bloch
+\end{itemize}
+}
+
+\begin{figure}
+\hfil\includegraphics[width=0.45\textwidth]{11-Absorber/Figures/bb_compare.pdf}\hfil
+
+\caption{\label{fig:eloss_bb} Comparison of measured momentum loss in data and in MC in Lithium Hydride.  MPV of momentum loss is shown at each point with the predition from the Bethe-Bloch formula shown as a solid line.}
+\end{figure}
+
+
 %% Effect of error in geometry
 %%   Test firing particles with modified geometry.
 %%   Modified geometry in Scott's analysis.
-
