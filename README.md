@@ -21,3 +21,13 @@ v0.3: more contributions
 v0.3.1: full EMR section from Francois    
 
 v0.4: Ckov plots
+
+v0.5: liquid hydrogen absorber included
+
+--------------------------------------------------
+
+Still missed:
+ - Energy loss in lH2
+ - Complete PID
+ 
+To merge the tracker and nearly ready for a first draft.
