@@ -3,12 +3,14 @@
 \section{Particle ID}
 \label{Sect:PID}
 
-While the protons in the MICE beam can be effectively removed before entering the detectors~\cite{proton_absorber}, the remaining particles are a mix of pions, muons, and electrons.  Effective particle ID (PID) methods are required to ensure that we are measuring the cooling of muons rather than of other particle species.  While earlier studies in MICE were performed with a beam optimized for muon purity~\cite{pion_contamination}, accurate particle ID algorithms allow us to optimize for muon yield rather than purity. {\color{red}Work is ongoing on an alternate multivariate likelihood-based PID algorithm, but the currently-used cut-based algorithm will be described here.}
+While the protons in the MICE beam can be effectively removed before entering the detectors~\cite{proton_absorber}, the remaining particles are a mix of pions, muons, and electrons.  Effective particle ID (PID) methods are required to ensure that we are measuring the cooling of muons rather than of other particle species.  While earlier studies in MICE were performed with a beam optimized for muon purity~\cite{2016JInst..11P3001A}, accurate particle ID algorithms allow us to optimize for muon yield rather than purity.
+
+{\color{red}Work is ongoing on an alternate multivariate likelihood-based PID algorithm, but the currently-used cut-based algorithm will be described here.}
 
 \subsection{Algorithm}
 \label{SubSect:PID_Algo}
 
-The PID algorithm uses the TOF and Tracker detectors.  TOF0 and TOF1 can be combined with the upstream tracker to ID a particle upstream of the absorber.  However, if the particle has decayed while traveling through the detector, a downstream identification is more difficult due to the fact that there is no entirely-downstream TOF measurement.  TOF1 and TOF2 can be combined with the downstream tracker, but the uncertainty in the PID is increased due to the particles' energy loss in the absorber.
+The PID algorithm uses the TOF and Tracker detectors.  TOF0 and TOF1 can be combined with the upstream tracker to ID a particle upstream of the absorber.  However, if the particle has decayed while travelling through the detector, a downstream identification is more difficult due to the fact that there is no entirely-downstream TOF measurement.  TOF1 and TOF2 can be combined with the downstream tracker, but the uncertainty in the PID is increased due to the particles' energy loss in the absorber.
 
 A particle's momentum can be calculated by the curvature of its track in the tracker's solenoid field, while its velocity can be calculated from the time-of-flight and the path length.  From these, the particle's mass can be calculated:
 
@@ -22,7 +24,7 @@ This method requires an accurate measurement of the particle's path length betwe
 
 Additionally, this calculation assumes that the measurements of TOF and momentum were performed at the same point.  Since the particle has lost momentum between the TOF and Tracker detectors, a correction must be added.  Figure~\ref{fig:tof_track}(a) shows that before this correction, the data points are well-separated into different particle species, but are slightly displaced from their naively-expected positions.
 
-To find this correction, a loose cut is performed on the data to find particles that are near the muon mass.  A fit is performed on these particles to find a momentum offset to be applied in Equation~\ref{eq:pid_mass_calc} to ensure that the muons are centered at the muon mass of $105.7$ MeV.  Figure~\ref{fig:tof_track}(b) shows the same data as in (a), but the expected pion and muon curves have been adjusted with this momemtum offset.
+To find this correction, a loose cut is performed on the data to find particles that are near the muon mass.  A fit is performed on these particles to find a momentum offset to be applied in Equation~\ref{eq:pid_mass_calc} to ensure that the muons are centred at the muon mass of $105.7$ MeV.  Figure~\ref{fig:tof_track}(b) shows the same data as in (a), but the expected pion and muon curves have been adjusted with this momentum offset.
 
 After the above parameters $\mathrm{TOF}_e$ and $p_\mathrm{offset}$ have been found, the PID algorithm can be applied to each track to calculate a mass for the particle, as shown in Figure~\ref{fig:pid_mass}.  Analyses may require different cuts on this variable due to different purity requirements, but pions and muons are sufficiently well-separated to allow good identification.
 

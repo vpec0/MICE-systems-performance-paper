@@ -28,15 +28,15 @@ To find this correction, a loose cut is performed on the data to find particles 
 
 After the above parameters $\mathrm{TOF}_e$ and $p_\mathrm{offset}$ have been found, the PID algorithm can be applied to each track to calculate a mass for the particle, as shown in Figure~\ref{fig:pid_mass}.  Analyses may require different cuts on this variable due to different purity requirements, but pions and muons are sufficiently well-separated to allow good identification.
 
-\begin{figure}
+\begin{figure}[!ht]
 \includegraphics[width=0.45\textwidth]{uncorrected_track_tof.pdf}\hfil
 \includegraphics[width=0.45\textwidth]{corrected_track_tof.pdf}
 \caption{The TOF measurement and Tracker momentum of particles in a selection of MICE runs with different momentum settings for the beam.  The solid lines show the expected momentum vs. TOF for pions at $m=140$ MeV, muons at $m=105$ MeV) and electrons at $m=511$ keV.  (a) shows this expected relation assuming no energy loss between TOF and Tracker detectors.  (b) shows the expected relation after correcting for this energy loss.}
 \label{fig:tof_track}
 \end{figure}
 
-\begin{figure}
-{\centering\includegraphics[width=0.45\textwidth]{calc_mass.pdf}}
+\begin{figure}[!ht]
+{\includegraphics[width=0.45\textwidth]{calc_mass.pdf}}
 \caption{The calculated mass of particles using the PID algorithm.}
 \label{fig:pid_mass}
 \end{figure}
