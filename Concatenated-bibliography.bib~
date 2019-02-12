@@ -1,133 +1,5 @@
-% Bibliography section for 04-Instrumentation
-
-@article{NOTE367,
-author  = {{Dobbs}, A. and others},
-title   = "{The MICE Luminosity Monitor}",
-journal = "{MICE Note 367}",
-url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0367/MICE0367.pdf}",
-year    = "2012"
-}
-
-@ARTICLE{2012JInst...7.5009B,
-   author = {{Bogomilov}, M. and others},
-    title = "{The MICE Muon Beam on ISIS and the beam-line instrumentation of the Muon Ionization Cooling Experiment}",
-  journal = {Journal of Instrumentation},
-archivePrefix = "arXiv",
-   eprint = {1203.4089},
- primaryClass = "physics.acc-ph",
-     year = 2012,
-    month = may,
-   volume = 7,
-    pages = {5009},
-      doi = {10.1088/1748-0221/7/05/P05009},
-   adsurl = {http://adsabs.harvard.edu/abs/2012JInst...7.5009B},
-  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}
-  
-@ARTICLE{2013arXiv1306.1509T,
-   author = {{The MICE Collaboration}},
-    title = "{Characterisation of the muon beams for the Muon Ionisation Cooling Experiment}",
-  journal = {ArXiv e-prints},
-archivePrefix = "arXiv",
-   eprint = {1306.1509},
- primaryClass = "physics.acc-ph",
- keywords = {Physics - Accelerator Physics},
-     year = 2013,
-    month = jun,
-   adsurl = {http://adsabs.harvard.edu/abs/2013arXiv1306.1509T},
-  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}
-
-@article{NOTE473,
-author  = {{Cremaldi}, L. and others},
-title   = "{Progress on Cherenkov Reconstruction in MICE}",
-journal = "{MICE Note 473}",
-url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0473/MICE0473.pdf}",
-year    = "2015"
-}
-
-@ARTICLE{ELLIS2011136,
-title = "The design, construction and performance of the MICE scintillating fibre trackers",
-journal = "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
-volume = "659",
-number = "1",
-pages = "136 - 153",
-year = "2011",
-issn = "0168-9002",
-doi = "https://doi.org/10.1016/j.nima.2011.04.041",
-url = "http://www.sciencedirect.com/science/article/pii/S0168900211008126",
-author = {{Ellis}, M. and others},
-keywords = "Muon detector, Scintillating fibre, Tracker, Ionisation cooling"
-}
-
-@ARTICLE{2016JInst..11P3001A,
-   author = {{Adams}, D. and others},
-    title = "{Pion contamination in the MICE muon beam}",
-  journal = {Journal of Instrumentation},
-archivePrefix = "arXiv",
-   eprint = {1511.00556},
- primaryClass = "physics.ins-det",
-     year = 2016,
-    month = mar,
-   volume = 11,
-    pages = {P03001},
-      doi = {10.1088/1748-0221/11/03/P03001},
-   adsurl = {http://adsabs.harvard.edu/abs/2016JInst..11P3001A},
-  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}
-
-@article{NOTE451,
-author  = {{Dobbs}, A. and others},
-title   = "{The Reconstruction Software for the MICE Scintillating Fibre Trackers}",
-journal = "{MICE Note 451}",
-url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0451/MICE0451.pdf}",
-year    = "2014"
-}
-
-@ARTICLE{2016JInst..11T10007,
-   author = {{Asfandiyarov}, R. and others},
-    title = "{The design and construction of the MICE Electron-Muon Ranger}",
-  journal = {Journal of Instrumentation},
-archivePrefix = "arXiv",
-   eprint = {1607.04955},
- primaryClass = "physics.ins-det",
-     year = 2016,
-    month = oct,
-   volume = 11,
-      eid = {T10007},
-    pages = {T10007},
-      doi = {10.1088/1748-0221/11/10/T10007},
-   adsurl = {http://adsabs.harvard.edu/abs/2016JInst..11T10007},
-  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}
-
-@MastersThesis{Drielsma:2017doj,
-   author = {Drielsma, Francois},
-    title = "{Electron-Muon Ranger: hardware characterization}",
-     year = {2014},
-   eprint = {1710.06946},
- archivePrefix = "arXiv",
- primaryClass = "physics.ins-det",
-   school = {University of Geneva},
-   url    = {https://arxiv.org/abs/1710.06946}
-}
-
-@ARTICLE{2015JInst..10P2012A,
-   author = {{Adams}, D. and others},
-    title = "{Electron-muon ranger: performance in the MICE muon beam}",
-  journal = {Journal of Instrumentation},
-archivePrefix = "arXiv",
-   eprint = {1510.08306},
- primaryClass = "physics.ins-det",
-     year = 2015,
-    month = dec,
-   volume = 10,
-      eid = {P12012},
-    pages = {P12012},
-      doi = {10.1088/1748-0221/10/12/P12012},
-   adsurl = {http://adsabs.harvard.edu/abs/2015JInst..10P2012A},
-  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 02-TOF
 
 @article{NOTE145,
     author  = {{Bonesini}, M.},
@@ -144,7 +16,7 @@ archivePrefix = "arXiv",
     url    = "{http://mice.iit.edu/micenotes/public/pdf/MICE0241/MICE0241.pdf}",
     year = 2008
 }
-    
+
 @ARTICLE{2010NIMPA.615...14B,
    author = {{Bertoni}, R. and {Blondel}, A. and {Bonesini}, M. and {Cecchet}, G. and 
 	{de Bari}, A. and {Graulich}, J.~S. and {Karadzhov}, Y. and 
@@ -199,6 +71,36 @@ archivePrefix = "arXiv",
   adsnote = {Provided by the SAO/NASA Astrophysics Data System}
 }
 
+@ARTICLE{2013arXiv1306.1509T,
+   author = {{The MICE Collaboration}},
+    title = "{Characterisation of the muon beams for the Muon Ionisation Cooling Experiment}",
+  journal = {ArXiv e-prints},
+archivePrefix = "arXiv",
+   eprint = {1306.1509},
+ primaryClass = "physics.acc-ph",
+ keywords = {Physics - Accelerator Physics},
+     year = 2013,
+    month = jun,
+   adsurl = {http://adsabs.harvard.edu/abs/2013arXiv1306.1509T},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2016JInst..11P3001A,
+   author = {{Adams}, D. and others},
+    title = "{Pion contamination in the MICE muon beam}",
+  journal = {Journal of Instrumentation},
+archivePrefix = "arXiv",
+   eprint = {1511.00556},
+ primaryClass = "physics.ins-det",
+     year = 2016,
+    month = mar,
+   volume = 11,
+    pages = {P03001},
+      doi = {10.1088/1748-0221/11/03/P03001},
+   adsurl = {http://adsabs.harvard.edu/abs/2016JInst..11P3001A},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
 @ARTICLE{NOTE251,
    author = {{Karadzhov}, Y. and others},
     title = "{TOF detectors Time Calibration}",
@@ -206,6 +108,148 @@ archivePrefix = "arXiv",
     url    = "{http://mice.iit.edu/micenotes/public/pdf/MICE0251/MICE0251.pdf}",
      year = 2009,
 }
+
+@PHDTHESIS{Rayner:2011zz,
+      author         = "Rayner, Mark Alastair",
+      title          = "{The development of a novel technique for characterizing
+                        the MICE muon beam and demonstrating its suitability for a
+                        muon cooling measurement}",
+      school         = "Oxford U.",
+      year           = "2011",
+      url            = "http://lss.fnal.gov/archive/other/thesis/rayner-m.pdf"
+%      reportNumber   = "MAP-DOC-4324",
+%      SLACcitation   = "%%CITATION = MAP-DOC-4324;%%"
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 04-Instrumentation
+
+@article{NOTE367,
+author  = {{Dobbs}, A. and others},
+title   = "{The MICE Luminosity Monitor}",
+journal = "{MICE Note 367}",
+url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0367/MICE0367.pdf}",
+year    = "2012"
+}
+
+@ARTICLE{2012JInst...7.5009B,
+   author = {{Bogomilov}, M. and others},
+    title = "{The MICE Muon Beam on ISIS and the beam-line instrumentation of the Muon Ionization Cooling Experiment}",
+  journal = {Journal of Instrumentation},
+archivePrefix = "arXiv",
+   eprint = {1203.4089},
+ primaryClass = "physics.acc-ph",
+     year = 2012,
+    month = may,
+   volume = 7,
+    pages = {5009},
+      doi = {10.1088/1748-0221/7/05/P05009},
+   adsurl = {http://adsabs.harvard.edu/abs/2012JInst...7.5009B},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+  
+
+
+@article{NOTE473,
+author  = {{Cremaldi}, L. and others},
+title   = "{Progress on Cherenkov Reconstruction in MICE}",
+journal = "{MICE Note 473}",
+url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0473/MICE0473.pdf}",
+year    = "2015"
+}
+
+@ARTICLE{ELLIS2011136,
+title = "The design, construction and performance of the MICE scintillating fibre trackers",
+journal = "Nuclear Instruments and Methods in Physics Research Section A: Accelerators, Spectrometers, Detectors and Associated Equipment",
+volume = "659",
+number = "1",
+pages = "136 - 153",
+year = "2011",
+issn = "0168-9002",
+doi = "https://doi.org/10.1016/j.nima.2011.04.041",
+url = "http://www.sciencedirect.com/science/article/pii/S0168900211008126",
+author = {{Ellis}, M. and others},
+keywords = "Muon detector, Scintillating fibre, Tracker, Ionisation cooling"
+}
+
+
+@article{NOTE451,
+author  = {{Dobbs}, A. and others},
+title   = "{The Reconstruction Software for the MICE Scintillating Fibre Trackers}",
+journal = "{MICE Note 451}",
+url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0451/MICE0451.pdf}",
+year    = "2014"
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% 05-EMR
+
+@ARTICLE{2016JInst..11T10007,
+   author = {{Asfandiyarov}, R. and others},
+    title = "{The design and construction of the MICE Electron-Muon Ranger}",
+  journal = {Journal of Instrumentation},
+archivePrefix = "arXiv",
+   eprint = {1607.04955},
+ primaryClass = "physics.ins-det",
+     year = 2016,
+    month = oct,
+   volume = 11,
+      eid = {T10007},
+    pages = {T10007},
+      doi = {10.1088/1748-0221/11/10/T10007},
+   adsurl = {http://adsabs.harvard.edu/abs/2016JInst..11T10007},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@MASTERSTHESIS{Drielsma:2017doj,
+   author = {Drielsma, Francois},
+    title = "{Electron-Muon Ranger: hardware characterization}",
+     year = {2014},
+   eprint = {1710.06946},
+ archivePrefix = "arXiv",
+ primaryClass = "physics.ins-det",
+   school = {University of Geneva},
+   url    = {https://arxiv.org/abs/1710.06946}
+}
+
+@PHDTHESIS{Drielsma:thesis,
+  author       = {Drielsma, Francois}, 
+  title        = {Measurement of the Increase in Phase Space Density
+		  of a Muon Beam through Ionization Cooling},
+  school       = {University of Geneva},
+  year         = 2018,
+  month        = 10,
+}
+
+@ARTICLE{2015JInst..10P2012A,
+   author = {{Adams}, D. and others},
+    title = "{Electron-muon ranger: performance in the MICE muon beam}",
+  journal = {Journal of Instrumentation},
+archivePrefix = "arXiv",
+   eprint = {1510.08306},
+ primaryClass = "physics.ins-det",
+     year = 2015,
+    month = dec,
+   volume = 10,
+      eid = {P12012},
+    pages = {P12012},
+      doi = {10.1088/1748-0221/10/12/P12012},
+   adsurl = {http://adsabs.harvard.edu/abs/2015JInst..10P2012A},
+  adsnote = {Provided by the SAO/NASA Astrophysics Data System}
+}
+
+@ARTICLE{2018arXiv1805.06623T,
+   author = {Drielsma, Francois},
+    title = "{Beam-based detector alignment in the MICE muon beam line}",
+     year = {2018},
+archivePrefix = "arXiv",
+   eprint = {1805.06623},
+primaryClass = "physics.ins-det",
+      url = {https://arxiv.org/abs/1805.06623}
+}
+
 
 % TOF box-shaped soft iron shieldings 
 %@ARTICLE{d0,
@@ -237,3 +281,117 @@ archivePrefix = "arXiv",
     url    = "{http://mice.iit.edu/micenotes/public/pdf/MICE0455/MICE0455.pdf}",
     year = 2015
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% 07-PID
+
+@ARTICLE{proton_absorber, 
+      author         = "{Blot, S. and others}",
+      title          = "{Proton contamination studies in the MICE muon beam line}",
+      booktitle      = "{Proceedings, 2nd International Particle Accelerator Conference (IPAC 2011): Kursaal, San Sebastian, Spain, September 4-9, 2011}",
+      year           = "2011",
+      url            = "accelconf.web.cern.ch/accelconf/ipac2011/papers/mopz034.pdf",
+      pages          = "MOPZ034",
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% 11-Absorber
+
+%@article{PhysRevD.98.030001,
+%  title = {Review of Particle Physics},
+%  author = {Tanabashi, M. and others},
+%  collaboration = {Particle Data Group},
+%  journal = {Phys. Rev. D},
+%  volume = {98},
+%  issue = {3},
+%  pages = {030001},
+%  numpages = {1898},
+%  year = {2018},
+%  month = {Aug},
+%  publisher = {American Physical Society},
+%  doi = {10.1103/PhysRevD.98.030001},
+%  url = {https://link.aps.org/doi/10.1103/PhysRevD.98.030001}
+%}
+
+@article{1748-0221-13-09-T09008,
+  author={Bayliss, V. and others},
+  title={The liquid-hydrogen absorber for MICE},
+  journal={Journal of Instrumentation},
+  volume={13},
+  number={09},
+  pages={T09008},
+  url={http://stacks.iop.org/1748-0221/13/i=09/a=T09008},
+  year={2018},
+}
+
+@ARTICLE{CernoxRTDs,
+  title = "{Cernox RTDs [Accessed 2 Oct. 2018]}",
+  url    = "{https://www.lakeshore.com/Documents/LSTC_Cernox_l.pdf}",
+  year = 2018,
+}
+
+@ARTICLE{TemperatureMeasurement,
+  title = "{Temperature Measurement and Control Catalog [Accessed 2 Oct. 2018]}",
+  url    = "{https://www.lakeshore.com/Documents/LakeShoreTC_l.pdf}",
+  year = 2018,
+}
+
+@article{NOTE524,
+    author  = {{Brown}, C. and others},
+    title   = "{Systematic Uncertainties in the lH2 absorber}",
+    journal = {MICE Note 524},
+    url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0524/MICE0524.pdf}",
+    year    = 2018
+}
+
+@ARTICLE{Hardin,
+  author  = {{Hardin}, G.},
+  title = "{Aluminum 6061-T6 (UNS AA96061) [Accessed 3 Oct. 2018]}",
+  url    = "{https://www.nist.gov/mml/acmd/aluminum-6061-t6-uns-aa96061}",
+  year = 2018,
+}
+
+@article{Ishimoto,
+      author         = {{Ishimoto}, S. and others},
+      title          = "{Liquid Hydrogen Absorber for MICE}",
+      booktitle      = "{Proceedings, 1st International Particle Accelerator
+                        Conference (IPAC'10): Kyoto, Japan, May 23-28, 2010}",
+      journal        = "Conf. Proc.",
+      volume         = "C100523",
+      year           = "2010",
+      pages          = "421-423",
+}
+
+@article{NOTE155,
+    author  = {{Green}, M. and others},
+    title   = "{Does One Know the Properties of a MICE Solid or Liquid Absorber to
+Better than 0.3 Percent?}",
+    journal = {MICE Note 155},
+    url     = "{http://mice.iit.edu/micenotes/public/pdf/MICE0155/MICE0155.pdf}",
+    year    = 2006
+}
+
+@ARTICLE{AtomicAluminium,
+  title = "{Atomic and nuclear properties of Aluminium}",
+  url   = "{http://pdg.lbl.gov/2017/AtomicNuclearProperties/HTML/aluminum_Al.html}",
+  year  = 2018,
+}
+
+@ARTICLE{AtomicHydrogen,
+  title = "{Atomic and nuclear properties of liquid Hydrogen}",
+  url   = "{http://pdg.lbl.gov/2017/AtomicNuclearProperties/HTML/liquid_hydrogen.html}",
+  year  = 2018,
+}
+
+@ARTICLE{MuonAluminium,
+  title = "{Muon in Aluminium}",
+  url   = "{http://pdg.lbl.gov/2017/AtomicNuclearProperties/MUE/muE_aluminum_Al.pdf}",
+  year  = 2018,
+}
+
+@ARTICLE{MuonliquidHydrogen,
+  title  = "{Muons in liquid Hydrogen}",
+  url    = "{http://pdg.lbl.gov/2017/AtomicNuclearProperties/MUE/muE_liquid_hydrogen.pdf}",
+  year = 2018,
+
+%%%%%%%%%%%% end %%%%%%%%%%%%%%%%%%%%%
