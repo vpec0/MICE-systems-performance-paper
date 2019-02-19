@@ -26,8 +26,8 @@ v0.5: liquid hydrogen absorber included
 
 --------------------------------------------------
 
-Still missed:
+v 0.9: all contributions apart from:
  - Energy loss in lH2
  - Complete PID
- 
-To merge the tracker and nearly ready for a first draft.
+
+ - New plots for EMR and Detector alignment all with MAUS-v3.2.0

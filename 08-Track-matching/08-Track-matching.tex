@@ -55,101 +55,100 @@ The sample sizes are shown for data in table \ref{tab:data_cuts_summary_2_0} and
     {Residual horizontal (x) position in TOF1 of tracker tracks following extrapolation from TKU. \label{fig:tof1_extrapolated_x}}
 \end{figure}
 
-\begin{figure}[!tbh]
-    \centering
-    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tof1_y}
-    {Residual vertical (y) position in TOF1 of tracker tracks following extrapolation from TKU. \label{fig:tof1_extrapolated_y}}
-\end{figure}
+%\begin{figure}[!tbh]
+%    \centering
+%    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tof1_y}
+%    {Residual vertical (y) position in TOF1 of tracker tracks following extrapolation from TKU. \label{fig:tof1_extrapolated_y}}
+%\end{figure}
+%
+%\begin{figure}[!tbh]
+%    \centering
+%    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tof0_t}
+%    {Residual TOF0 time of the extrapolated track. Track trajectories were drawn from TKU, while the track times were
+%    drawn from TOF1 with appropriate offsets for time-of-flight from TKU to TOF1 considered. \label{fig:tof0_extrapolated_t}}
+%\end{figure}
 
-\begin{figure}[!tbh]
-    \centering
-    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tof0_t}
-    {Residual TOF0 time of the extrapolated track. Track trajectories were drawn from TKU, while the track times were
-    drawn from TOF1 with appropriate offsets for time-of-flight from TKU to TOF1 considered. \label{fig:tof0_extrapolated_t}}
-\end{figure}
+A typical residual plot is shown in Fig.~\ref{fig:tof1_extrapolated_x} for the extrapolated position following extrapolation to TOF1.
+In general the width of the distributions are comparable between MC and data. Where the diffuser is in place for higher emittance beams, the extrapolation goes through the diffuser material so the residuals are wider, owing to the increased scattering from the diffuser.
 
-The extrapolated position following extrapolation to TOF1 is shown in Fig.~\ref{fig:tof1_extrapolated_x} and \ref{fig:tof1_extrapolated_y}.
-In general the width of the distributions are comparable between MC and data. Where the diffuser is in
-place for higher emittance beams, the extrapolation goes through the diffuser
-material so the residuals are wider, owing to the increased scattering from the
-diffuser.
+%The extrapolated position following extrapolation to TOF1 is shown in Fig.~\ref{fig:tof1_extrapolated_x} and \ref{fig:tof1_extrapolated_y}.
 
-The time-of-flight residual in data shows a systematic offset from 0 and relative to the
-MC, as in Fig.~\ref{fig:tof0_extrapolated_t}. The offset from 0 gets worse for higher emittance beams. It is thought to be
-an intrinsic property of the beam; muons that are scattered in materials between 
-the tracker and the TOF have systematically shorter path lengths than the 
-extrapolated trajectories, resulting in systematically longer extrapolated time
-of flight. The MC reconstruction is known to have issues, as evidenced by the 
-discrepancy in slab $dt$ for TOF0 and TOF1.
+%The time-of-flight residual in data shows a systematic offset from 0 and relative to the
+%MC, as in Fig.~\ref{fig:tof0_extrapolated_t}. The offset from 0 gets worse for higher emittance beams. It is thought to be
+%an intrinsic property of the beam; muons that are scattered in materials between 
+%the tracker and the TOF have systematically shorter path lengths than the 
+%extrapolated trajectories, resulting in systematically longer extrapolated time
+%of flight. The MC reconstruction is known to have issues, as evidenced by the 
+%discrepancy in slab $dt$ for TOF0 and TOF1.
 
-\textcolor{red}{Plot momentum vs dt for TOF01 and TOF12}
+%\textcolor{red}{Plot momentum vs dt for TOF01 and TOF12}
 
-\begin{figure}[!tbh]
-    \centering
-    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_x}
-    {Residual $x$ position of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_x}}
-\end{figure}
+%\begin{figure}[!tbh]
+%    \centering
+%    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_x}
+%    {Residual $x$ position of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_x}}
+%\end{figure}
+%
+%\begin{figure}[!tbh]
+%    \centering
+%    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_y}
+%    {Residual $y$ position of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_y}}
+%\end{figure}
+%
+%\begin{figure}[!tbh]
+%    \centering
+%    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_px}
+%    {Residual $p_x$ of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_px}}
+%\end{figure}
+%
+%\begin{figure}[!tbh]
+%    \centering
+%    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_py}
+%    {Residual $p_y$ of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_py}}
+%\end{figure}
+%
+%\begin{figure}[!tbh]
+%    \centering
+%    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_p}
+%    {Residual $p_{tot}$ of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_p}}
+%\end{figure}
 
-\begin{figure}[!tbh]
-    \centering
-    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_y}
-    {Residual $y$ position of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_y}}
-\end{figure}
+%Small misalignments between TKU extrapolated tracks and TKD are observed, 
+%indicated by the offset of transverse variables from 0, shown in 
+%Fig.~\ref{fig:tkd_extrapolated_x} and \ref{fig:tkd_extrapolated_y}. There are known, 
+%uncorrected misalignments in the detector system and there are expected to be 
+%additional misalignments in the magnets which could lead to these offsets.
 
-\begin{figure}[!tbh]
-    \centering
-    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_px}
-    {Residual $p_x$ of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_px}}
-\end{figure}
+%The total momentum shows discrepancy between TKU and TKD of about 1 MeV/c. This
+%is consistent with the systematic offset in the tracker momentum resolution 
+%shown in Fig.~\ref{fig:tku_resolution} and \ref{fig:tkd_resolution}. It is
+%interesting to note that the level of agreement between MC and data varies
+%on a setting-by-setting basis in a statistically significant manner. Agreement
+%is better for the settings where the liquid hydrogen windows were installed.
 
-\begin{figure}[!tbh]
-    \centering
-    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_py}
-    {Residual $p_y$ of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_py}}
-\end{figure}
+%\begin{figure}[!tbh]
+%    \centering
+%    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tof2_t}
+%    {Residual time of TKU tracks extrapolated to TOF2, as compared to the time measured in TOF2. The track times were
+%    drawn from TOF1 with appropriate offsets for time-of-flight from TKU to TOF1 considered.}
+%\end{figure}
+%
+%\begin{figure}[!tbh]
+%    \centering
+%    \topmatterallplots{08-Track-matching}{compare_globals}{global_ds_residual_tof2_x}
+%    {Residual $x$ position of TKD tracks extrapolated to TOF2, as compared to the position measured in TOF2.}
+%\end{figure}
+%
+%\begin{figure}[!tbh]
+%    \centering
+%    \topmatterallplots{08-Track-matching}{compare_globals}{global_ds_residual_tof2_y}
+%    {Residual $y$ position of TKD tracks extrapolated to TOF2, as compared to the position measured in TOF2.}
+%\end{figure}
 
-\begin{figure}[!tbh]
-    \centering
-    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tkd_tp_p}
-    {Residual $p_{tot}$ of TKU tracks extrapolated to TKD, as compared to the tracks in TKD. \label{fig:tkd_extrapolated_p}}
-\end{figure}
+%Further small misalignments are observed in the position residuals between TOF2
+%and tracks extrapolated from TKD. This is attributed to alignment issues.
 
-Small misalignments between TKU extrapolated tracks and TKD are observed, 
-indicated by the offset of transverse variables from 0, shown in 
-Fig.~\ref{fig:tkd_extrapolated_x} and \ref{fig:tkd_extrapolated_y}. There are known, 
-uncorrected misalignments in the detector system and there are expected to be 
-additional misalignments in the magnets which could lead to these offsets.
-
-The total momentum shows discrepancy between TKU and TKD of about 1 MeV/c. This
-is consistent with the systematic offset in the tracker momentum resolution 
-shown in Fig.~\ref{fig:tku_resolution} and \ref{fig:tkd_resolution}. It is
-interesting to note that the level of agreement between MC and data varies
-on a setting-by-setting basis in a statistically significant manner. Agreement
-is better for the settings where the liquid hydrogen windows were installed.
-
-\begin{figure}[!tbh]
-    \centering
-    \topmatterallplots{08-Track-matching}{compare_globals}{global_through_residual_tof2_t}
-    {Residual time of TKU tracks extrapolated to TOF2, as compared to the time measured in TOF2. The track times were
-    drawn from TOF1 with appropriate offsets for time-of-flight from TKU to TOF1 considered.}
-\end{figure}
-
-\begin{figure}[!tbh]
-    \centering
-    \topmatterallplots{08-Track-matching}{compare_globals}{global_ds_residual_tof2_x}
-    {Residual $x$ position of TKD tracks extrapolated to TOF2, as compared to the position measured in TOF2.}
-\end{figure}
-
-\begin{figure}[!tbh]
-    \centering
-    \topmatterallplots{08-Track-matching}{compare_globals}{global_ds_residual_tof2_y}
-    {Residual $y$ position of TKD tracks extrapolated to TOF2, as compared to the position measured in TOF2.}
-\end{figure}
-
-Further small misalignments are observed in the position residuals between TOF2
-and tracks extrapolated from TKD. This is attributed to alignment issues.
-
-TOF2 exhibits a significant offset from the extrapolated track.
+%TOF2 exhibits a significant offset from the extrapolated track.
 
 % Not for now
 %\subsection{Beam based magnet alignment}
