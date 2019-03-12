@@ -32,3 +32,5 @@ v 0.9:
   - energy loss in lH2
 
 - New plots for EMR and Detector alignment, all done with MAUS-v3.2.0
+- Updated TOF plots
+- New LH2 temperature plot for the steady state
