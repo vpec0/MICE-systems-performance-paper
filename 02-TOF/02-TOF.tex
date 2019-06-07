@@ -93,7 +93,7 @@ chain and a 1~mm thick $\mu$-metal shield, extending 30~mm beyond the
 photocathode surface.  To increase the count rate stability active
 dividers were used, instead of conventional resistive
 ones. Illustration of TOF1 station is shown in
-Figure~\ref{fig:tof:schematic} together with an exploded view of a
+Fig.~\ref{fig:tof:schematic} together with an exploded view of a
 slab.
 
 \begin{figure}[!ht]
@@ -135,7 +135,7 @@ used for the rest of the MICE detector systems.
 % particles by using the detector X/Y
 % redundancy~\cite{NOTE251}. }
 
-All stations were exposed to residual magnetic fields: TOF0 station was placed in a relatively low residual field produced by the last quadrupole magnet of the beam line, while the other two TOF stations were exposed to the stray fields of the cooling channel solenoids. A shielding structure was adopted covering all PMTs at each side of the stations. Fig.~\ref{fig:TOF2} shows photographs from the assembly of the TOF2 station at INFN MIB, taken from \cite{NOTE286}.
+All stations were exposed to residual magnetic fields: TOF0 station was placed in a relatively low residual field produced by the last quadrupole magnet of the beam line, while the other two TOF stations were exposed to the stray fields of the cooling channel solenoids. A shielding structure was adopted covering all PMTs at each side of the stations.
 
 %All three stations were exposed to residual magnetic fields. TOF0 station
 %was placed in a relatively low residual field ($\le 50~\Gauss$)
@@ -185,20 +185,6 @@ All stations were exposed to residual magnetic fields: TOF0 station was placed i
 %  \end{center}
 %\end{figure}
 
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=0.24\columnwidth]{./02-TOF/Figures/TOF_assembly_a.png}
-  \includegraphics[width=0.24\columnwidth]{./02-TOF/Figures/TOF_assembly_b.png}
-  \includegraphics[width=0.24\columnwidth]{./02-TOF/Figures/TOF_assembly_c.png}
-  \includegraphics[width=0.24\columnwidth]{./02-TOF/Figures/TOF_assembly_d.png}
-  \caption{Assembly of TOF2 at INFN MIB mechanics workshop. Left to
-    right: from the bare magnetic shielding to the fully assembled
-    counters of one plane.}
-  \label{fig:TOF2}
-  \end{center}
-\end{figure}
-
-
 % \malert{The following paragraph is summarising the performance. It
 %   states overly optimistic performance.}
 % \malert{reformulate ---} For what attains performances\malert{---},
@@ -239,7 +225,7 @@ resolution, one reaches near $100\%$ discrimination efficiency.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %The following text describes the method used to calibrate the TOF system and its performance.
 
-\subsection{Calibration Method}
+\subsubsection{Calibration Method}
 % \begin{itemize}
 % \item Describe the method. Based on MICE note 251.
 % \item \malert{TOF NIMA paper says that measured time resolution of the
@@ -297,236 +283,8 @@ a correction for the reference trigger time delay.
 
 Details of the calibration method are described in \cite{NOTE251}.
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Time-walk Correction}
-% \begin{itemize}
-% \item  \malert{Fig of a selected PMT TW 2D hist. + Profile + Fit}
-% \item  \malert{Fig of residual TW.}
-% \item  \malert{Fig of Slab DT before TW
-%     correction and after.}
-% \end{itemize}
-
-First correction to the measured time of each channel is time-walk
-correction. It was considered to be a static property of each
-channel. The same correction was used for all runs. The correction was
-determined by looking at time difference between two selected channels
-of slabs from different planes.
-
-Let $T^{ijk}$ denote a TDC measured time in PMT $k$ of a slab $j$ in a
-plane $i$. Similarly, let $ADC^{ijk}$ be the measured pulse height in
-that PMT channel. Then time-walk of PMT $k$ in slab $j$ of plane 0 was
-determined from the 2D distribution of $T^{14k'} - T^{0jk}$
-vs.~$ADC^{0jk}$. The reference channel was chosen from slab in the middle
-of the other plane (slab 4 in this example). PMT with higher mean ADC
-count was selected.
-
-A special pre-correction was first determined for reference slabs,
-middle slabs in each plane. Only events where particle crossed the
-pixel corresponding to their crossing were considered. The pixel
-was in the centre of the station and was always well populated with
-particles crossing it.  The ADC count in one of the slabs taken as a
-reference was limited to a $10\%$ region around its mean. The TDC time
-of the slab was then little affected by the time walk.
-
-The following function was fitted to the profile of the 2D data histogram:
-%
-\begin{equation}
-  \newcommand{\ADC}{\text{ADC}}
-  \label{eq:twf}
-  f(\ADC) = P_1 + \frac{P_2}{\ADC - P_0} + \frac{P_3}{\left(\ADC - P_0\right)^2}.
-\end{equation}
-%
-Where possible, parameter $P_3$ was fixed to 0. For some PMTs such fit
-would not follow the measured trend and the additional parameter was
-added to the fit.
-
-After the pre-correction of the reference slabs, time-walk of all the
-PMT channels was determined by looking at events in pixels
-corresponding to the crossing with the reference slab.
-
-An example of time walk of a channel with respect to pre-corrected
-time in a reference slab is shown in Figure~\ref{fig:TW}. The residual
-effect of time walk after the correction is also shown.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=0.45\columnwidth]{01_tw_example}
-  \includegraphics[width=0.45\columnwidth]{03_residual_tw_example} \\
-  \caption{Time walk (left) in PMT 0 of slab 4 in plane 0 (horizontal)
-    of station TOF0: the 2D histogram (coloured scale) is overlaid
-    with its profile and with the fit function described in
-    Eq.~\ref{eq:twf}. Residual time walk (right) after the
-    correction was applied.  }
-  \label{fig:TW}
-  \end{center}
-\end{figure}
-
-
-
-Figure~\ref{fig:SlabDTTW} shows distributions of time differences
-between horizontal slab 4 and vertical slab 5 before and after the
-time-walk correction. The width of the distribution is significantly
-decreased. The mean of the distribution is not centered at 0 as
-differences in delays \Tzero{} were not accounted for, yet.
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=0.5\columnwidth]{02_slab_dt_resolution_tw_effect}
-  \caption{Distribution of time differences \DT{} between horizontal slab 4 and
-    vertical slab 5 in station TOF0. Distribution before and after the
-  time-walk correction are overlaid.}
-  \label{fig:SlabDTTW}
-  \end{center}
-\end{figure}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{Trigger Delay Correction}
-
-\newcommand{\Tdelay}[2]{\ensuremath{T_{\text{tr}}^{#1,#2}}}
-\newcommand{\TW}{\ensuremath{\text{TW}}}
-\newcommand{\PMT}{\ensuremath{\text{PMT}}}
-\newcommand{\ttrig}[2]{\ensuremath{{t}_{#2}^{#1}}}
-\newcommand{\mean}[1]{\ensuremath{\left< #1 \right>}}
-
-% Station TOF1 was used to trigger the readout of the whole system. Time
-% of it's trigger signal was used as a reference signal to which times
-% of each channel of all 3 stations were measured. A two-fold coincidence
-% of signals crossing threshold in PMTs on both sides of a slab is
-% required.
-% %
-% For an incoming particle the trigger signal is given by the first of
-% the twofold coincidences from slab i and slab k. The time of the
-% coincidence signal is the time of the latest signal arriving to the
-% logic unit.
-% %
-% Which PMT channel will be causing trigger depends on the position
-% within the slab of the particle crossing and the \Tzero{} delays of
-% individual PMTs. Assuming that light arrival time does not change
-% significantly across a pixel and no other effects influence signal
-% arrival one can expect that passage of a particle through a given
-% pixel causes always the same time sequence of PMT signals and the
-% delay of the trigger signal will be that of one particular channel in
-% each pixel. This assumption, however, does not hold for all
-% pixels. The main reason being the time walk effect which biases each
-% channel differently and in some pixels results in more than 1 PMT
-% channel generating the trigger signal.
-
-Station TOF1 was used to trigger the readout of the whole system. Time
-of it's trigger signal was used as a reference signal for time
-measurements of all 3 stations. Depending on position where a particle
-was crossing the TOF1 station, this trigger signal will have different
-delays. The delay of each pixel was measured relative to the central
-pixel of TOF1 station. It was assumed that the source of the delay for
-individual pixel did not change from event to event. Although in
-reality this was not the case for most of the pixels, it was a good
-enough approximation.
-
-Determination of the trigger delays for each pixel was as follows:
-Times of each PMT were corrected for time walk first. Trigger delay of
-the central pixel, defined as a crossing of station's 2 reference
-slabs, was set to 0. Trigger delays of the rest of the pixels in the
-reference slabs were calculated from differences of mean times of each
-PMT. For example, for pixels $i$ of the horizontal reference slab
-$\text{refx}$, the trigger delay time $T^\text{trig}_{\text{refx},i}$
-is given by:
-%
-\begin{linenomath}
-  \begin{equation}
-    \label{eq:trigdel:a}
-    T^\text{trig}_{\text{refx},i} =
-    \frac12\sum_{\PMT}
-    \mean{t^{\PMT, \text{refx}}_{\text{refx},i}} -
-    \mean{t^{\PMT,\text{refx}}_{\text{refx},\text{refy}}},
-  \end{equation}
-\end{linenomath}
-%
-where $t^{\PMT, i}_{i,j}$ is the time in PMT of slab $i$ for events
-where particle crossed pixel $i, j$. The delays are averaged over both
-PMTs of the slab. Pixel denoted refx,refy is the central reference
-pixel of the TOF1 station.
-
-For the rest of the pixels, not defined by the reference slabs, the
-trigger delay times were determined as a delay with respect to the
-pixels on the reference slabs. Delays of those reference pixels were
-then added:
-%
-\newcommand{\Ttrig}[1]{\ensuremath{T^\text{trig}_{#1}}}
-%
-\begin{linenomath}
-  \begin{equation}
-    \Ttrig{i,j} =
-    \frac14\sum_{\PMT}
-    \left(
-      \mean{\ttrig{\PMT,i}{i,j}} - \mean{\ttrig{\PMT,i}{i,\text{refy}}} +
-      \mean{\ttrig{\PMT,j}{i,j}} - \mean{\ttrig{\PMT,j}{\text{refy},j}}
-    \right)
-    + \frac12
-    \left(
-      \Ttrig{i,\text{refy}} + \Ttrig{\text{refx},j}
-    \right)
-    \label{eq:trigdel:both}
-  \end{equation}
-\end{linenomath}
-
-% Figure~X shows comparison of time-walk corrected times of a particular
-% PMT channel for particles passing through two different pixels. The variation
-% in position of the peaked distributions is clearly visible.
-
-% Figure~Y shows times measured in a channel in TOF0 station for
-% particles crossing the station's central pixel (4,5). Times
-% before correction for the trigger signal delay are compared to times
-% after the correction.
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{$T0$ Correction}
-
-Times in each channel were also corrected for the channel specific
-delays caused by each PMT and by the cable lengths. The correction was
-determined from times measured of particles crossing through the
-middle pixel of each slab. The times were corrected for the time walk
-and for TOF0 and TOF2 stations also for the trigger signal delay. The
-correction for TOF1, the readout triggering station, were set such
-that the mean of the time distribution was at 0.
-
-Times in TOF0 and TOF2 stations reflected the time of flight of
-individual particles to and from TOF1. Distribution of the times in
-those stations show 3-peaked structure, where the most isolated peak at
-lowest time-of-flight corresponds to the electrons. They travel at the
-speed of light and their time of flight was calculated from
-distances from TOF1 station. Corrections for each channel were
-determined such that the electron peak was located at the predicted
-time of flight.
-
-Figure~\ref{fig:tof0times} shows position of the electron peak as
-measured by TOF0 station in one run with beam at nominal
-140~MeV/c. Uncorrected raw times are compared to fully corrected
-time. Corrected-time distribution shows better electron peak
-separation and it also places it to the correct position relative to
-TOF1.
-
-Due to the presence of focusing fields in the beam-line section
-between TOF0 and TOF1 stations, particles did not travel in a straight
-line in that section. Deviation from a straight line was dependent on
-the initial direction and momentum of the particles entering the
-section. The effect was estimated~\cite{Rayner:2011zz} in
-simulations to be of an order of $\sim$30~ps. This effect caused a
-small bias in the calibrations.
-
-\begin{figure}[!ht]
-  \centering
-  \includegraphics[width=0.8\columnwidth]{04_tof0_corrected_vs_uncorrected}
-  \caption{Example of time distribution of events in TOF0. Times
-    before any corrections (green) are compared to to times with all
-    corrections applied (blue). The two distributions are overlaid
-    such that the electron peaks (the right-most of the three peaks of
-    each distribution) are centered on the top of each other.}
-  \label{fig:tof0times}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Reconstruction}
+\subsubsection{Reconstruction}
 
 Particle crossing a TOF station must have crossed 2 orthogonal slabs
 in the stations 2 planes.  The time and approximate position of
@@ -608,34 +366,16 @@ average is a half of the spread of their difference. Therefore,
 looking at slab \DT{} allows determination of the time-of-flight
 resolution.
 
-Due to the errors in calibrations, especially in the underpopulated
-peripheral pixels, the slab \DT{} distributions have slight offsets
-from 0. Also, the spread of the distributions varies from pixel to
-pixel. The offsets and the spreads of the slab \DT{} distributions for
-individual pixels are shown in
-Figures~\ref{fig:SlabDToffsetByPixel}~and~\ref{fig:SlabDTresByPixel},
-respectively.
-
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=0.9\columnwidth]{05_slab_dt_offset_by_pixel_2d} \\
-  \caption{Offsets in slab \DT{} for individual pixels for all 3 stations.}
-  \label{fig:SlabDToffsetByPixel}
-  \end{center}
-\end{figure}
-
-
-\begin{figure}
-  \begin{center}
-  \includegraphics[width=0.9\columnwidth]{06_slab_dt_resolution_by_pixel_2d} \\
-  \caption{Spread in the slab \DT{} distributions of each pixel.}
-  \label{fig:SlabDTresByPixel}
-  \end{center}
-\end{figure}
+%Due to the errors in calibrations, especially in the underpopulated
+%peripheral pixels, the slab \DT{} distributions have slight offsets
+%from 0. Also, the spread of the distributions varies from pixel to
+%pixel. The offsets and the spreads of the slab \DT{} distributions for
+%individual pixels are shown in
+%Figures~\ref{fig:SlabDToffsetByPixel}~and~\ref{fig:SlabDTresByPixel},
+%respectively.
 
 Overall performance can be inferred from the combined slab \DT{}
-distributions. The plots in Figure~\ref{fig:SlabDtAll} show that they all centre
+distributions. The plots in Fig.~\ref{fig:SlabDtAll} show that they all centre
 approximately at 0~ns and they exhibit very similar resolutions, with TOF1
 having the largest spread.
 
@@ -674,22 +414,12 @@ in each plane of a station, but they were never matched. These events
 were mostly results of multiple particles passing through the station
 and causing signal in one plane only. They would never be matched in
 time as they arrived within the beam bunch time stretch of about
-1~\us{}. Figure~\ref{fig:SpEffByPixel} shows fractions of events where
-there were signals in two perpendicular slabs and they were
-time-matched. One can see lower efficiency/fraction in the peripheral
-pixels which is associated with the larger fraction of multiple
-particle crossings with giving signal in one slab only.
-
-
-
-\begin{figure}[!htb]
-  \begin{center}
-  \includegraphics[width=0.9\columnwidth]{08_sp_eff_by_pixel_2d} \\
-  \caption{Efficiency of space point creation if there were hits in
-    two transverse slabs.}
-  \label{fig:SpEffByPixel}
-  \end{center}
-\end{figure}
+1~\us{}.
+%Figure~\ref{fig:SpEffByPixel} shows fractions of events where
+%there were signals in two perpendicular slabs and they were
+%time-matched. One can see lower efficiency/fraction in the peripheral
+%pixels which is associated with the larger fraction of multiple
+%particle crossings with giving signal in one slab only.
 
 
 %To be changed with a better one

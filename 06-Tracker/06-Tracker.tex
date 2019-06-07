@@ -10,7 +10,7 @@ The trackers are 110\,cm in length and 30\,cm in diameter (see Fig.~\ref{Figure:
 
 \begin{figure}[ht]
 \begin{center}
-\includegraphics[width=0.8\textwidth,keepaspectratio=true,]{FullTracker.png}
+\includegraphics[width=0.6\textwidth,keepaspectratio=true,]{FullTracker.png}
 \end{center}
 \caption{Photograph of one of the MICE Trackers, showing the five stations and the three doublet planes of scintillating fibres, each plane at 120$^\circ$ angles to the next (the central fibres of plane can be seen as darker lines traversing the station). Bundles of seven 350$\mu m$ fibres are grouped together, to be read out by 1\,mm scintillating fibre light guides.}
 \label{Figure:FullTracker}
@@ -21,75 +21,30 @@ The tracker stations consists of three doublet layers of 350$\mu m$ scintillatin
 The light from the seven scintillating fibres passes into a single clear fibre, which takes it to a visible light photon counter (VLPC) which operate at 9\,k. The signals from the VLPCs are digitised using electronics developed by the D0 collaboration~\cite{Abazov:2005pn}.
 
 
-\subsection{Tracker Performance and Reconstruction}
-
-\subsubsection{Low Level Analysis}
-
-In order to validate the performance of the tracker and its reconstruction it is necessary to validate each element of the reconstruction which goes into creating the final particle tracks through the tracker. This is known as low level analysis.
+\subsection{Performance and Reconstruction}
 
 Each of the 15 tracker planes (three per station and five stations) consist of 214 channels, labelled 0--213, likewise each plane is assigned an integer plane number 0--2. Particle signals are recorded by the tracker electronics and calibrated channel by channel then converted into signal NPE. This information is then used to form a digit and is the first step in tracker reconstruction.
-
-In Fig.~\ref{Figure:Digits_Up} and Fig.~\ref{Figure:Digits_Down} are shown the digit profiles for each of the 15 planes (with planes 0--2 shown in columns left to right and each plane of stations 1--5 shown in descending rows) respectively for TKU and TKD. These digit profiles are useful in identifying and rectifying or removing hot or dead channels in the planes and ensuring the accuracy of calibration.  Smooth centrally peaked spectra are expected in a plane with no dead channels and minimal electronics noise, but this is not an essential requirement since it is the combination of two or three planes which go to make a point in the track and so there is redundancy built in.  Hence a significant proportion of individual channels can be lost without a knock on drop in efficiency. 
-
-A number of channels in the readout electronics were lost due to ageing over the summer shut down. The effect was minimised by re-routing the external light-guides to allow the channels which could not be read out to be grouped into one plane per station.
-%This allowed to recover 
-
-\begin{figure}[ht]
-\begin{center}
-\includegraphics[width=0.6\textheight,keepaspectratio=true,]{Digits_Up.pdf}
-\end{center}
-\caption{Digit profiles for the 15 planes of TKU, showing total NPE deposited for all events against channel number in the tracker plane.}
-\label{Figure:Digits_Up}
-\end{figure}
-
-\begin{figure}[ht]
-\begin{center}
-\includegraphics[width=0.6\textheight,keepaspectratio=true,]{Digits_Down.pdf}
-\end{center}
-\caption{Digit profiles for the 15 planes of TKD, showing total NPE deposited for all events against channel number in the tracker plane.}
-\label{Figure:Digits_Down}
-\end{figure}
-
+Digit profiles are useful in identifying and rectifying or removing hot or dead channels in the planes and ensuring the accuracy of calibration.  Smooth centrally peaked spectra are expected in a plane with no dead channels and minimal electronics noise, but this is not an essential requirement since it is the combination of two or three planes which go to make a point in the track and so there is redundancy built in. Hence a significant proportion of individual channels can be lost without a knock on drop in efficiency. 
 The clustering algorithm loops over every combination of pairs of digits in a single event and combines any that occur in neighbouring channels. In the case of a multi-digit cluster, the unweighted average channel value is used to define the plane coordinate and the NPE is summed.
-%.....
 
-\begin{figure}[!ht]
-\begin{center}
-\includegraphics[width=0.9\textwidth,keepaspectratio=true,]{Clusters.pdf}
-\end{center}
-\caption{Cluster}
-\label{Figure:Clusters}
-\end{figure}
+%\begin{figure}[!ht]
+%\begin{center}
+%\includegraphics[width=0.9\textwidth,keepaspectratio=true,]{Clusters.pdf}
+%\end{center}
+%\caption{Cluster}
+%\label{Figure:Clusters}
+\%end{figure}
 
 For each station the constituent planes are searched for clusters that can be used to form a spacepoint.
-Spacepoints are constructed from clusters from all three planes (a triplet spacepoint) or from any two out of the three planes (a doublet spacepoint), as shown in Fig.~\ref{SP_US} and Fig.~\ref{SP_DS} respectively for TKU and TKD.
+Spacepoints are constructed from clusters from all three planes (a triplet spacepoint) or from any two out of the three planes (a doublet spacepoint).
 
-\begin{figure}[!ht]
-\begin{center}
-\includegraphics[width=0.75\textwidth,keepaspectratio=true,]{SPSeeds10314.png}
-\end{center}
-\caption{(Left) the NPE of each spacepoint in the US and DS trackers combined. (Right) only the NPE of those spacepoints which go on to make tracks in the US and DS trackers combined are shown.}
-\label{Figure:SPSeeds_10314}
-\end{figure}
-
-
-\begin{figure}[ht]
-	\centering
-    \begin{tabular}{cc}
-	    \includegraphics[width=0.5\textwidth]{Spacepoint_tripets_Up.pdf} &	
-        \includegraphics[width=0.5\textwidth]{Spacepoint_Doublets_Up.pdf} \\
-    \end{tabular}
-	\caption{\label{SP_US}Space point triplets in TKU (left) and in TKD (right).}
-\end{figure}
-
-\begin{figure}[ht]
-	\centering
-    \begin{tabular}{cc}
-	    \includegraphics[width=0.5\textwidth]{Spacepoint_tripets_Down.pdf} &	
-        \includegraphics[width=0.5\textwidth]{Spacepoint_Doublets_Down.pdf} \\
-    \end{tabular}
-	\caption{\label{SP_DS}Space point doublets in TKU (left) and in TKD (right).}
-\end{figure}
+%\begin{figure}[!ht]
+%\begin{center}
+%\includegraphics[width=0.75\textwidth,keepaspectratio=true,]{SPSeeds10314.png}
+%\end{center}
+%\caption{(Left) the NPE of each spacepoint in the US and DS trackers combined. (Right) only the NPE of those spacepoints which go on to make tracks in the US and DS %trackers combined are shown.}
+%\label{Figure:SPSeeds_10314}
+%\end{figure}
 
 \subsubsection{Noise}
 %Noise at electronics level discussion, 1/2 page, and Noise from data, 1/2 page.
@@ -98,16 +53,7 @@ The scintillating fibre trackers operate by registering digits above a given NPE
 \subsubsection{Track Finding Efficiency}
 \label{trackers:performance:efficiency}
 %Track selection/Kalman, efficiency (from all data runs plotted by pt and if all equal just 10mm can be shown) resolution (from MC), reference MAUS and Tracker SW paper, 1 page, Chris H.
-Data were analysed in order to determine the track and spacepoint finding efficiency of the detectors during running conditions. A time-of-flight cut was used to ensure that each measured track had a time-of-flight consistent with a muon throughout the entire experimental apparatus (see Fig.~\ref{Figure:efficiency_tof_plots}). A hit was therefore required in each of the TOF1 and TOF2 detectors, which ensured that the particle must have been successfully transmitted through the cooling channel, crossing both tracking detectors. These requirements ensure that there is a better then 99.9\% probability that a particle will have traversed a tracking detector. The number of events missing a track is therefore measured and used to estimate the efficiency of the detector.
-
-\begin{figure}[ht]
-	\centering
-    \begin{tabular}{cc}
-    	\includegraphics[width=0.5\textwidth]{efficiency_tof1_selection.pdf}%
-    	\includegraphics[width=0.5\textwidth]{efficiency_tof2_selection.pdf}
-    \end{tabular}
-    \caption{\label{Figure:efficiency_tof_plots}Time-of-flight distributions between TOF0 and TOF1 (left) and between TOF1 and TOF2 (right) for run number 09768. The location of the cuts is shown. The left plot demonstrates the event selection before entering the cooling channel and the right plot demonstrates the impurity rejection.}
-\end{figure}
+Data were analysed in order to determine the track and spacepoint finding efficiency of the detectors during running conditions. A time-of-flight cut was used to ensure that each measured track had a time-of-flight consistent with a muon throughout the entire experimental apparatus. A hit was therefore required in each of the TOF1 and TOF2 detectors, which ensured that the particle must have been successfully transmitted through the cooling channel, crossing both tracking detectors. These requirements ensure that there is a better then 99.9\% probability that a particle will have traversed a tracking detector. The number of events missing a track is therefore measured and used to estimate the efficiency of the detector.
 
 The results of the efficiency analysis are tabulated in table~\ref{Table:tracker_efficiency_results} for a range of momentum and nominal emittances. A track-finding efficiency of 98.70\% is reported for the upstream tracker and 98.93\% for the downstream tracker, averaged over field and beam conditions. Additionally, assuming a track is found, the probability of successfully finding each spacepoint is summarized in table~\ref{Table:tracker_spacepoint_efficiency_results}. The overall efficiency of both trackers is sufficient to not present any significant systematic uncertainties in the analysis, however it is lower than the ideal expectation, 99.9\% efficiency, due to the presence of dead channels, an unavoidable feature of the construction process.
 
@@ -180,7 +126,7 @@ Results are presented in Fig.~\ref{trackers:performance:resolutions:up} for the 
 \end{figure}
 
 
-\subsection{Tracker Efficiency Evolution}
+\subsection{Efficiency evolution}
 
 The efficiency of the tracker was processed over the lifetime of its use during the data taking. The analysis used in section~\ref{trackers:performance:efficiency} was repeated and automated for runs starting in 2015. The evolution of the helical track finding efficiency in the upstream and downstream trackers is shown in Fig.~\ref{fig:trackers:performance:historical}.
 
