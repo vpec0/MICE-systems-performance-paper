@@ -55,14 +55,14 @@
 Three time-of-flight detectors (TOF0, TOF1, TOF2) were built and
 installed at RAL in 2008 and 2009 to measure the position and the time
 of crossing particles.  TOF0 and
-TOF1~\cite{NOTE145},~\cite{NOTE241},~\cite{2010NIMPA.615...14B} were
+TOF1~\cite{NOTE145}\cite{NOTE241}\cite{2010NIMPA.615...14B} were
 placed upstream of the cooling channel, and TOF2~\cite{NOTE286} was
 downstream of the channel, mounted in front of the KL, as shown
 in~Fig.~\ref{fig:BL}.  The time of flight between two TOF stations
 provides particle identification information and can also be used for
 momentum measurement. TOF1 served most of the time also as an
 experimental trigger. They operated smoothly during the so-called
-Step~I and Step~IV~\cite{Rajaram:2015bra},~\cite{2015ehep.confE.521B}
+Step~I and Step~IV~\cite{Rajaram:2015bra}\cite{2015ehep.confE.521B}
 running periods of the MICE experiment and were essential for all the
 measurements done.
 
@@ -85,9 +85,9 @@ made of BC404 plastic scintillator\footnote{Emission maximum at
   $408$~nm, decay time $1.8$~ns, attenuation length $160~cm$}. A
 simple fishtail light-guide was used to attach each end of a bar to
 R4998 Hamamatsu fast photomultiplier tubes\footnote{one-inch linear
-  focused PMTs with 10 stages, typical gain G$\sim$5.7$\times$10$^6$
-  at -2250~V and B=0~T, rise time 0.7~ns, transit time spread
-  (TTS)~$\sim$160~ps}.  R4998 PMTs were delivered by Hamamatsu in
+focused PMTs with 10 stages, typical gain G$\sim$5.7$\times$10$^6$
+at -2250~V and B=0~T, rise time 0.7~ns, transit time spread
+(TTS)~$\sim$160~ps}.  R4998 PMTs were delivered by Hamamatsu in
 assemblies (H6533MOD) that included the PMT tube, the voltage divider
 chain and a 1~mm thick $\mu$-metal shield, extending 30~mm beyond the
 photocathode surface.  To increase the count rate stability active
@@ -109,8 +109,7 @@ The stations TOF0, TOF1, and TOF2 had active areas of
 respectively.  Each of the planes in TOF0 station had 10 4-cm wide
 scintillator slabs. Stations TOF1 and TOF2 used 7 and
 10 in each plane, respectively.
-The PMTs are connected to a $50\%-50\%$ passive splitter using
-$\sim$34~m long RG213 signal cable. One half of the signal is fed to
+The PMTs are connected to a $50\%-50\%$ passive splitter using RG213 signal cable. One half of the signal is fed to
 the leading-edge CAMAC Lecroy 4115 discriminator followed by CAEN
 V1290 TDC for time measurements. Second half of the signal goes to
 CAEN V1724 FADC for pulse-height measurements. Pulse height
@@ -251,7 +250,6 @@ from the PMT. The lengths of slabs in TOF0, TOF1, and TOF2 were 40~cm,
 42~cm, and 60~cm, respectively. This translates to about 3~ns, 3.1~ns,
 and 4.4~ns, respectively, as the effective light propagation speed in
 the scintillator was found to be approximately 13.5~cm/ns.
-
 More delay was introduced by the transit time of each PMT and of the
 cable that led the signal to the readout electronics. These times were
 unique for each individual PMT channel and needed to be determined in
@@ -278,10 +276,8 @@ matter anymore, because the average of the times of the 2 PMTs does
 not depend on it.
 
 Corrections which need to be made to the measured times are then the
-time-walk correction, the PMT channel specific delay time $T0$, and
-a correction for the reference trigger time delay.
-
-Details of the calibration method are described in \cite{NOTE251}.
+time-walk correction, the PMT channel specific delay time and
+a correction for the reference trigger time delay\cite{NOTE251}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Reconstruction}
@@ -300,7 +296,7 @@ The 2 slabs hit by a particle defined a pixel of area given by the
 width of the slabs. Sometimes, there were more slabs in each plane
 with signals. Matching of 2 slabs being crossed by a particle was done
 based on their measured signal time. They were matched if the times
-were within a 4-ns window. The time of the particle crossing was
+were within a 4~ns window. The time of the particle crossing was
 determined as the average of times of the 2 matched slabs.
 
 
@@ -308,9 +304,7 @@ In order to be able to correct for the trigger signal delay, the pixel
 through which the particle crossed TOF1 needed to be determined. All
 possible combinations of 2 slabs from 2 different planes were
 tested. The times of the recorded PMT signals were corrected under the
-hypothesis that correct slabs were matched. The pixel of the crossing
-particle was identified if the time difference of the 2 slabs was
-shorter than 4~ns.
+hypothesis that correct slabs were matched.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

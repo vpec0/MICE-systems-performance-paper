@@ -33,9 +33,9 @@ The detector has been used to estimate the level of pion contamination within th
 The study of KL response to different particle types at different momenta is based on particle identification obtained by time-of-flight detector, as shown in the example of~Fig.~\ref{fig:TOF_peaks}, by applying proper cuts on the time-of-flight spectrum. The performance is presented for 140, 170, 200, 240 and 300 MeV/c momenta at the absorber position, and depending of species population for muons, pions and electrons. The results presented below are obtained from the straight tracks data (i.e. without magnetic fields in the trackers or focus coil) taken mainly in 2017. The KL response to muons, pions and electrons for all available momenta is presented in~Fig.~\ref{fig:KL_to_mu_pi_e}. It is clear in the cases of muons and pions that they are below mip momenta since energy deposition decreases with momentum increasing~\footnote{Actually the energy deposition is defined as the sum of ADC products from all cells in KL above a given threshold. The ADC product on the other hand is the product of left and right side of one slab divided by the sum of left and right side: $ADC_{prod} = 2 \times ADC_{left}  \times ADC_{right} / (ADC_{left} + ADC_{right})$. The factor 2 is present for normalization. The product of two sides compensates the effect of attenuation.}.
   \begin{figure}
 	\begin{center}
-  		\includegraphics[width=0.3\columnwidth]{./04-KL/Figures/muon.png}
-  		\includegraphics[width=0.3\columnwidth]{./04-KL/Figures/pion.png}
-  		\includegraphics[width=0.3\columnwidth]{./04-KL/Figures/electron.png}
+  		\includegraphics[width=0.32\columnwidth]{./04-KL/Figures/muon.png}
+  		\includegraphics[width=0.32\columnwidth]{./04-KL/Figures/pion.png}
+  		\includegraphics[width=0.32\columnwidth]{./04-KL/Figures/electron.png}
   		\caption{KL response to muons (left), pions (centre) and electrons (right) for several momenta. It is shown charge deposited by particles in KL in arbitrary units. All histograms are normalized to unity.}
   		\label{fig:KL_to_mu_pi_e}
   	\end{center}
@@ -65,9 +65,9 @@ The number of fired KL cells by a single muon, electron or pion is given in ~Fig
        
   \begin{table}[htb]
   	\begin{center}
-  		\begin{tabular}{|c|c|c|c|c|c|} 
+  		\begin{tabular}{c|c|c|c|c|c} 
   			\hline
-  			\textbf{species} &\textbf{140 MeV/c} & \textbf{170 MeV/c} & \textbf{200 MeV/c}	&\textbf{240 MeV/c} &\textbf{300 MeV/c}\\
+  			\textbf{Species} &\textbf{140 MeV/c} & \textbf{170 MeV/c} & \textbf{200 MeV/c}	&\textbf{240 MeV/c} &\textbf{300 MeV/c}\\
   			\hline
   			\textbf{electrons} & 0.95 $\pm$ 0.02  & 0.95 $\pm$ 0.01 & 0.94 $\pm$ 0.03 & n/a & n/a \\
   			\hline
@@ -81,16 +81,16 @@ The number of fired KL cells by a single muon, electron or pion is given in ~Fig
   	\end{center}
   \end{table}
 
-In~Fig.~\ref{fig:KL_mc_vs_data} is shown simulation of KL response to 300 MeV/c muons and pions and the distributions are compared with data. The agreement between data and simulation is very good. The simulation is done via following steps:
+In~Fig.~\ref{fig:KL_mc_vs_data} is shown simulation of KL response to 300 MeV/c muons and pions and the distributions are compared with data.
+The simulation takes into account the distribution of the photon in scintillator fibres, the subsequent creation of photoelectrons on photomultiplier photocathodes and the response of the photomultipliers (which gain is around $2 \times 10^6$).
+The agreement between data and simulation is very good.
 
-\begin{itemize}
-	\item Smearing of produced photons in scintillator fibres. They obtain Poisson statistic so such is applied. In principal one can replace it with Gaussian because the number of photons created is  large enough for such an approximation.
-	
-	\item Photoelectrons created on photomultiplier photocathode also have Poisson statistics. It cannot be replaced here with normal distribution because the number of photoelectrons is small enough so such an approximation is illegal.
-	
-	\item Photomultiplier gain obtains also statistical properties but it is neither Poisson nor gauss. Nevertheless it turns out that for simplicity one can use Gaussian distribution with mean value equals to PMT gain and sigma of distribution equals to half of the gain. KL photomultipliers have gain $\sim 2 \times 10^6$, so their sigma is simply $10^6$.
-	
-\end{itemize}
+%The simulation is done via following steps:
+%\begin{itemize}
+%	\item Smearing of produced photons in scintillator fibres. They obtain Poisson statistic so such is applied. In principal one can replace it with Gaussian because the number of photons created is  large enough for such an approximation.
+%	\item Photoelectrons created on photomultiplier photocathode also have Poisson statistics. It cannot be replaced here with normal distribution because the number of photoelectrons is small enough so such an approximation is illegal.
+%	\item Photomultiplier gain obtains also statistical properties but it is neither Poisson nor gauss. Nevertheless it turns out that for simplicity one can use Gaussian distribution with mean value equals to PMT gain and sigma of distribution equals to half of the gain. KL photomultipliers have gain $\sim 2 \times 10^6$, so their sigma is simply $10^6$.
+%\end{itemize}
 
    \begin{figure}
    	\begin{center}

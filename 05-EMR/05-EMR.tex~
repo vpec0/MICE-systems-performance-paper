@@ -60,7 +60,7 @@ Only the particles with a time-of-flight between 28 and 28.75\,ns, i.e. compatib
 
 A muon that makes it into the analysis sample has a momentum larger than 350\,MeV/$c$ right before TOF2. It is expected to cross both TOF2 and the KL without stopping and penetrate the EMR. In practice, the probability of creating an EMR event, i.e. to produce hits in the detector is $99.62\pm0.03\,\%$. The minor inefficiency may be attributed to pions in the muon sample that experience hadronic interactions in the KL. If hits are produced in the detector, space points are reconstructed $98.56\pm0.06\,\%$. This inefficiency may be associated with muon that decay between TOF2 and the EMR and produce scarce hits in the detector.
 
-To evaluate the efficiency of the scintillator planes and their readouts, only the muons which penetrate the entire detector are taken into account. If a signal is recorded in the most downstream plane, it is expected that at least a bar will be hit in each plane on its path and that a signal will be recorded in the single anode PMT. The left panel of figure~\ref{fig:emr_eff} shows the MAPMT bar hit multiplicity for all the plane combined.
+To evaluate the efficiency of the scintillator planes and their readouts, only the muons which penetrate the entire detector are taken into account. If a signal is recorded in the most downstream plane, it is expected that at least a bar will be hit in each plane on its path and that a signal will be recorded in the single anode PMT.
 In $3.26\pm0.02\,\%$ of cases, on average, a plane traversed by a muon will be not produce a signal in its MAPMT and that the most probable amount of bars hit is one, while
 a track is missed by an SAPMT $1.88\pm0.01\,\%$ of the time. 
 Figure~\ref{fig:emr_plane_eff} shows the probability of recording a signal in individual MAPMTs and the SAPMTs for each of the 48 planes, given a muon that crosses the whole detector. The most inefficient PMTs miss the track $\sim10\,\%$ of the time.
@@ -115,31 +115,17 @@ The limits of the peaks are fitted to each setting in order to separate the muon
 \end{table}
 
 MICE is a single-particle experiment, i.e. the signals associated with a trigger originate from a single particle traversing the detector. The multi-anode readout of each detector plane provides an estimate of the position of the particle track in the $xz$ or the $yz$ projection, depending on the orientation of the scintillator bars.
-Inside the detector the muon exhibits a clean straight track while the positron showers inside the lead of the KL and produces a disjointed and widespread signature. The particle identification variables used in the EMR are based on these distinct characteristics.
-
-The first particle identification statistic is the plane density, $\rho_p$, defined as
+Inside the detector the muon exhibits a clean straight track while the positron showers inside the lead of the KL and produces a disjointed and widespread signature. 
+Two particle identification variables based on these distinct characteristics can be defined. One is the plane density, $\rho_p$, defined as
 \begin{equation}
 \rho_p = \frac{N_p}{Z_p+1},
 \end{equation}
-with $N_p$ the number of planes hit and $Z_p$ the number of the most downstream plane. A muon deposits energy in every plane it crosses until it stops, producing a plane density close or equal to one. A positron shower contains photons that may produce hits deep inside the fiducial volume without leaving a trace on their path, reducing the plane density. The left panel of figure~\ref{fig:emr_pid_variables} shows the distribution of plane density of the muon and positron templates. The two templates occupy significantly different regions of plane density, as expected.
-
-\begin{figure}[htb!]
-	\begin{center}
-		\includegraphics[width=0.49\columnwidth]{rhop.pdf}
-		\hfill
-		\includegraphics[width=0.49\columnwidth]{chi2.pdf}
-		\caption{Plane density distribution, $\rho_p$ (left), and normalised chi squared distribution, $\hat{\chi}^2$ (right), of the muon and electron templates in the Electron-Muon Ranger.}
-		\label{fig:emr_pid_variables}
-	\end{center}
-\end{figure}
-
-The second variable is the normalised chi squared, $\hat{\chi}^2$, of the fitted straight track, i.e.
+with $N_p$ the number of planes hit and $Z_p$ the number of the most downstream plane. A muon deposits energy in every plane it crosses until it stops, producing a plane density close or equal to one. A positron shower contains photons that may produce hits deep inside the fiducial volume without leaving a trace on their path, reducing the plane density. The second variable is the normalised chi squared, $\hat{\chi}^2$, of the fitted straight track, i.e.
 \begin{equation}
 \hat{\chi}^2=\frac{1}{N-4}\sum_{i=1}^{N}\frac{\text{res}_{x,i}^2+\text{res}_{y,i}^2}{\sigma_x^2+\sigma_y^2},
 \end{equation}
-with $N$ the number of space points (one per bar hit), $\text{res}_{q,i}$ the residual of the space point with respect to the track in the $qz$ projection and $\sigma_q$ the uncertainty on the space point in the $qz$ projection, $q=x,\,y$~\cite{Drielsma:thesis}. The number of degrees of freedom is $N-4$, as a three-dimensional straight track admits four parameters. This quantity represents the transversal spread of the particle's signature. A muon follows a single track and is expected to have a $\hat{\chi}^2$ close to one, while an electron shower is expected to produce a larger value. The right panel of figure~\ref{fig:emr_pid_variables} shows the distribution of normalised chi squared of the muon and positron templates. The two templates occupy different regions of $\hat{\chi}^2$ but overlap more than in the case of the plane density.
-
-The two discriminating variables are combined to form a statistical test on the particle hypothesis. Given an unknown particle species, consider a set of cuts, $(\rho_c,\hat{\chi}^2_c)$, such that
+with $N$ the number of space points (one per bar hit), $\text{res}_{q,i}$ the residual of the space point with respect to the track in the $qz$ projection and $\sigma_q$ the uncertainty on the space point in the $qz$ projection, $q=x,\,y$~\cite{Drielsma:thesis}. The number of degrees of freedom is $N-4$, as a three-dimensional straight track admits four parameters. This quantity represents the transversal spread of the particle's signature. A muon follows a single track and is expected to have a $\hat{\chi}^2$ close to one, while an electron shower is expected to produce a larger value.
+The two discriminating variables can be combined to form a statistical test on the particle hypothesis. Given an unknown particle species, consider a set of cuts, $(\rho_c,\hat{\chi}^2_c)$, such that
 \begin{equation}
 \begin{gathered}
 \rho_p>\rho_c \cap \hat{\chi}^2<\hat{\chi}^2_c  \rightarrow  \mu^+; \\
@@ -148,17 +134,7 @@ The two discriminating variables are combined to form a statistical test on the 
 \end{equation}
 Dense and narrow events will be tagged as muons while non-continuous and wide electron showers will not. 
 
-The quality of a test statistic may be characterized in terms of the loss, $\alpha$, the fraction the muon sample that is rejected, and the contamination, $\beta$, the fraction of the electron sample that is selected. A test is optimal when the cost function, $\Delta=\sqrt{\alpha^2+\beta^2}$, is minimized. Figure~\ref{fig:emr_pid_eff} shows the result of a scan over the parameter space. The left panel represents the cost, $\Delta$, as a function of the two parameters that define the test statistic. Each marker in the right panel represents the value of $\alpha$ and $\beta$ for the test values. The optimum choice of cuts yields a muon loss of 1.027\,\% and an electron contamination of 0.934\,\%.
-
-\begin{figure}[htb!]
-	\begin{center}
-		\includegraphics[width=0.49\columnwidth]{pid_loss.pdf}
-		\hfill
-		\includegraphics[width=0.49\columnwidth]{pid_multi.pdf}
-		\caption{(Left) Cost function, $\Delta=\sqrt{\alpha^2+\beta^2}$, as a function of the choice of cuts on the plane density and shower spread, $(\rho_c,\hat{\chi}^2_c)$. The white circle represents the minimum. (Right) Percentage of the electron sample tagged as muons ($\beta$) as a function of the loss of real muons ($\alpha$).}
-		\label{fig:emr_pid_eff}
-	\end{center}
-\end{figure}
+The quality of a test statistic may be characterized in terms of the loss, $\alpha$, the fraction the muon sample that is rejected, and the contamination, $\beta$, the fraction of the electron sample that is selected.
 
 The downstream tracker (TKD) allows for the reconstruction of each particle momentum before entering the EMR. To assess the influence of momentum on contamination and loss, their values are calculated for 10\,MeV/$c$ bins in the range 100--300\,MeV/$c$. The test statistic performed in each bin is based on the optimal set of cuts optimized for the whole sample, i.e. $\rho^*=86.131$\,\% and $\hat{\chi}^{2*}=14.229$. Figure~\ref{fig:emr_pid_mom} shows the loss, $\alpha$, and the contamination, $\beta$, as a function the TKD momentum. It shows that, at low momentum, the apparent muon loss increases. This is due to an increase in decay probability between TOF2 and the EMR and an decrease in the amount of muons that cross the KL to reach the EMR.
 
@@ -169,4 +145,3 @@ The downstream tracker (TKD) allows for the reconstruction of each particle mome
 		\label{fig:emr_pid_mom}
 	\end{center}
 \end{figure}
-
