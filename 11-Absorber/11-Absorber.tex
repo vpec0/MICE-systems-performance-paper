@@ -58,7 +58,7 @@ Cooldown and liquefaction were completed slowly over eight days until the 25 Sep
 
 The sensors have a typical accuracy of $\mathrm{\pm}$ 9mK and a long-term stability of $\mathrm{\pm}$ 12mK at 20K. The magnetic field dependent temperature error at 2.5T is 0.04\% $\Delta$T/T, equivalent to $\mathrm{\pm}$ 8mK at 20K~\cite{CernoxRTDs}\cite{TemperatureMeasurement}. These are the quoted uncertainties given by the manufacturer of the sensors. The importance of magnetic fields on temperature measurements is that they cause reversible calibration shifts: when the magnetic field is removed, the sensors return to their original calibration.
 
-To reduce the uncertainty in the liquid Hydrogen density a calibration procedure was devised using the boiling point: the corrected temperature reading is found by applying a cut-off correction, a magnetic field correction based on the focus coil current and mode, and then a boiling point scaling factor~\cite{NOTE524}. 
+To reduce the uncertainty in the liquid Hydrogen density a calibration procedure was devised using the boiling point: the corrected temperature reading is found by applying a cut-off correction, a magnetic field correction based on the focus coil current and mode, a correction for the non-linearity of the sensors and then a boiling point scaling factor~\cite{NOTE524}. 
 %\begin{table}
 %\scriptsize
 %  \caption{
@@ -80,17 +80,17 @@ To reduce the uncertainty in the liquid Hydrogen density a calibration procedure
 
 \begin{figure}[htb!]
   \begin{center}
-  \includegraphics[width=0.80\textwidth]{LH2_temperature_calibrated_steady.pdf}
+  \includegraphics[width=0.80\textwidth]{11-Absorber/Figures/SteadyState60mK.png}
   \end{center}
-  \caption{Temperature of the LH2 during the steady-state period. After applying all the correction factors the sensors agree to within 0.2K of each other. During the steady-state the boiling point temperature is 20.511K.}
+  \caption{Average LH2 temperature recorded by the sensors during the steady-state period. After applying all the correction factors the temperature remains at or close to the boiling point temperature.}
   \label{Fig:TempCalibrated}
 \end{figure}
  
- The boiling temperature at 1.085 Bar is 20.511K, with our corrected sensor readings slightly higher (Fig. \ref{Fig:TempCalibrated}). There are however a number of uncertainties. The sensors add another 29mK (9mK accuracy + 12mK stability + 8mK magnetic field), although the magnetic field error is likely greater. The temperature scaling and magnet current correction factors also have an associated error as they are based on the 0.1K resolution.
+ The boiling temperature at 1.085 Bar is 20.511K (Fig. \ref{Fig:TempCalibrated}). There are however a number of uncertainties. The sensors add 17mK (9mK accuracy + 12mK stability + 8mK magnetic field), although the magnetic field error is likely greater. The non-linearity of the sensors add 0.03K. The temperature scaling and magnet current correction factors also have an associated error as they are based on the 0.1K resolution.
 %For example, a calibrated sensor at boiling temperature and 1.505 Bar should read 21.692K but can only read 21.65K (21.6K cut-off plus 0.05 cut-off correction) i.e. it is off by 0.042K. The pressure sensors have an uncertainty of $\mathrm{\pm}$ 5mBar which equates to $\mathrm{\pm}$ 0.016K during steady state.
-The pressure uncertainty ($\mathrm{\pm}$ 5mBar) adds another uncertainty to the temperature calibration constants of $\mathrm{\pm}$ 0.014K. Collectively, all these uncertainties add up to 0.2K.
+The pressure uncertainty ($\mathrm{\pm}$ 5mBar) adds another uncertainty to the temperature calibration constants of $\mathrm{\pm}$ 0.014K. Collectively, all these uncertainties add up to 0.2K for each sensor.
  
-Knowing that in our steady state condition the liquid Hydrogen was close to the boiling temperature of liquid Parahydrogen~\cite{NOTE524} at 20.5K $\mathrm{\pm}$ 0.2K and 1.085 Bar allows us to determine the uncertainty in the density as 70.54kg/m${}^{3}$ $\mathrm{\pm}$ 0.24kg/m${}^{3}$
+For our steady state condition the liquid Hydrogen was close to the boiling temperature of liquid Parahydrogen~\cite{NOTE524}. The average temperature of the eight sensors during steady-state was 20.51K $\mathrm{\pm}$ 0.07K at 1.085 Bar and allows us to determine the uncertainty in the density as 70.54kg/m${}^{3}$ $\mathrm{\pm}$ 0.08kg/m${}^{3}$
  
 
 \subsubsection{Contraction of the absorber vessel due to cooling}
@@ -139,23 +139,22 @@ Aluminium and liquid Hydrogen traversed. There are four windows, two absorber wa
 %(Windows 002, 003, 009 and 012 from Table \ref{tab:summary}) 
 
 At the centre of the absorber, the
-total amount of Aluminium the muon beam passes through is 785 $\mathrm{\pm}$ 24 microns, a variance of
-3.057\%. However, as the windows are thin, the effects on energy loss are negligible. A 200MeV muon passing
-along the central axis of an empty absorber loses 0.345 MeV, which introduces a 0.01 MeV uncertainty on
+total amount of Aluminium the muon beam passes through is 785 $\mathrm{\pm}$ 13 microns, a variance of 1.68\%. However, as the windows are thin, the effects on energy loss are negligible. A 200 MeV muon passing
+along the central axis of an empty absorber loses 0.345 MeV, which introduces a 0.006 MeV uncertainty on
 energy loss.
 
 
 \subsubsection{Total Systematic Uncertainty on Energy Loss}
 \label{SubSect:Absorber_total}
 
-In total there are three main contributions to the systematic uncertainty of the liquid Hydrogen absorber on energy loss. The contraction of the absorber and deflection of the absorber window due to internal pressure (Eq.~\ref{Totaldeflection}) reduces the central warm bore length by 0.4 $\mathrm{\pm}$ 0.3mm.
+In total there are three main contributions to the systematic uncertainty of the liquid Hydrogen absorber on energy loss. The contraction of the absorber and deflection of the absorber window due to internal pressure (Eq.~\ref{Totaldeflection}) reduces the central warm bore length by 0.4 $\mathrm{\pm}$ 0.2mm.
 
 \begin{equation}
-    1.4525\ \left(\pm \ 0.0581\right)-2\left(0.5374\left(\pm 0.1098\right)\right)=0.3777\pm 0.2777=0.4mm\pm 0.3mm
+    1.4525\ \left(\pm \ 0.0581\right)-2\left(0.5374\left(\pm 0.1098\right)\right)=0.3777\pm 0.1629=0.4mm\pm 0.2mm
 \label{Totaldeflection}    
 \end{equation}
 
-The combined absorber window thickness variation at the centre of the absorber is 24 microns. The temperature during the steady state period of the experiment when the pressure remained constant at 1085 $\mathrm{\pm}$ 5 mBar is 20.5 $\mathrm{\pm}$ 0.2K corresponding to a liquid Hydrogen density of 70.54 $\mathrm{\pm}$ 0.24kg/m${}^{3}$.
+The combined absorber window thickness variation at the centre of the absorber is 13 microns. The average temperature during the steady state period of the experiment when the pressure remained constant at 1085 $\mathrm{\pm}$ 5 mBar is 20.51 $\mathrm{\pm}$ 0.07K corresponding to a liquid Hydrogen density of 70.54 $\mathrm{\pm}$ 0.08kg/m${}^{3}$.
 
 The energy loss is momentum dependent as each particle will lose a different amount of energy passing through the absorber. Tables \ref{tab:Aluminium} and \ref{tab:Hydrogen} show the energy loss at various momenta and densities of Aluminium and liquid Hydrogen~\cite{AtomicAluminium}\cite{AtomicHydrogen}\cite{MuonAluminium}\cite{MuonliquidHydrogen}. 277 MeV and 344 MeV are the minimum ionization momenta of Aluminium and liquid Hydrogen respectively.
 
@@ -203,9 +202,9 @@ Momentum & 100 & 140 & 200 & 344     \rule{0pt}{14pt} \\
 \end{table} 
 
 
- During the MICE experiment 140, 170, 200 and 240 MeV momenta muon beams were used. The energy loss and its uncertainty were then be calculated. The calculation used a central bore length of 349.6 $\mathrm{\pm}$ 0.3mm, a total window thickness of 0.785 $\mathrm{\pm}$ 0.024mm and a liquid Hydrogen density of 70.54 $\mathrm{\pm}$ 0.24kg/m${}^{3}$ for a particle travelling straight through the centre of the absorber.
+ During the MICE experiment 140, 170, 200 and 240 MeV momenta muon beams were used. The energy loss and its uncertainty were then be calculated. The calculation used a central bore length of 349.6 $\mathrm{\pm}$ 0.2mm, a total window thickness of 0.785 $\mathrm{\pm}$ 0.013mm and a liquid Hydrogen density of 70.54 $\mathrm{\pm}$ 0.08kg/m${}^{3}$ for a particle travelling straight through the centre of the absorber.
 
- For a 140 MeV muon particle this corresponds to an energy loss of 10.88 $\mathrm{\pm}$ 0.06 ($\mathrm{\pm}$ 0.51\%) MeV, while for a 200 MeV muon particle this corresponds to an energy loss of 10.44 $\mathrm{\pm}$ 0.05 ($\mathrm{\pm}$ 0.51\%) MeV. In terms of Energy loss, the systematic error is 0.51\%. This is for a particle travelling along the central axis of the absorber. An actual muon travelling through the absorber with a magnetic field will take a different path and thus have a different path length of Aluminium and liquid Hydrogen traversed.
+ For a 140 MeV muon particle this corresponds to an energy loss of 10.88 $\mathrm{\pm}$ 0.02 ($\mathrm{\pm}$ 0.2\%) MeV, while for a 200 MeV muon particle this corresponds to an energy loss of 10.44 $\mathrm{\pm}$ 0.02 ($\mathrm{\pm}$ 0.2\%) MeV. In terms of Energy loss, the systematic error is 0.2\%. This is for a particle travelling along the central axis of the absorber. An actual muon travelling through the absorber with a magnetic field will take a different path and thus have a different path length of Aluminium and liquid Hydrogen traversed.
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55 
 % Scott's section 
@@ -261,3 +260,4 @@ Momentum & 100 & 140 & 200 & 344     \rule{0pt}{14pt} \\
 %% Effect of error in geometry
 %%   Test firing particles with modified geometry.
 %%   Modified geometry in Scott's analysis.
+ 

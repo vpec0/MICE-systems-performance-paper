@@ -1,7 +1,14 @@
 *.aux
 Systems-performance.log
 Systems-performance.out
+Systems-performance.bbl
+Systems-performance.blg
+Systems-performance.fdb_latexmk
+Systems-performance.fls
+Systems-performance.synctex.gz
+Systems-performance.toc
 .gitignore~
+.gitignore
 .directory
 *~
 */*~
