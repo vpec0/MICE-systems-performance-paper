@@ -248,12 +248,12 @@ scintillator slab where it is detected by photomultiplier tubes. The
 light-travel time depends on the distance of the particle crossing
 from the PMT. The lengths of slabs in TOF0, TOF1, and TOF2 were 40~cm,
 42~cm, and 60~cm, respectively. This translates to about 3~ns, 3.1~ns,
-and 4.4~ns, respectively, as the effective light propagation speed in
-the scintillator was found to be approximately 13.5~cm/ns.
-More delay was introduced by the transit time of each PMT and of the
-cable that led the signal to the readout electronics. These times were
-unique for each individual PMT channel and needed to be determined in
-dedicated measurements.
+and 4.4~ns of light travel time, respectively, as the effective light
+propagation speed in the scintillator was found to be approximately
+13.5~cm/ns.  More delay was introduced by the transit time of each PMT
+and of the cable that led the signal to the readout electronics. These
+times were unique for each individual PMT channel and needed to be
+determined in dedicated measurements.
 
 The times of each signal of a PMT were measured as times of signal threshold
 crossings in a simple linear discriminator. This introduced bias in
@@ -283,7 +283,7 @@ a correction for the reference trigger time delay\cite{NOTE251}.
 \subsubsection{Reconstruction}
 
 Particle crossing a TOF station must have crossed 2 orthogonal slabs
-in the stations 2 planes.  The time and approximate position of
+in the station's 2 planes.  The time and approximate position of
 particle crossing a TOF station was reconstructed from the PMT signals
 in the two slabs. Each slab with at least one recorded signal in each
 of the 2 attached PMTs was considered as being crossed by a
@@ -300,11 +300,11 @@ were within a 4~ns window. The time of the particle crossing was
 determined as the average of times of the 2 matched slabs.
 
 
-In order to be able to correct for the trigger signal delay, the pixel
-through which the particle crossed TOF1 needed to be determined. All
-possible combinations of 2 slabs from 2 different planes were
-tested. The times of the recorded PMT signals were corrected under the
-hypothesis that correct slabs were matched.
+% In order to be able to correct for the trigger signal delay, the pixel
+% through which the particle crossed TOF1 needed to be determined. All
+% possible combinations of 2 slabs from 2 different planes were
+% tested. The times of the recorded PMT signals were corrected under the
+% hypothesis that correct slabs were matched.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -369,10 +369,19 @@ resolution.
 %respectively.
 
 Overall performance can be inferred from the combined slab \DT{}
-distributions. The plots in Fig.~\ref{fig:SlabDtAll} show that they all centre
-approximately at 0~ns and they exhibit very similar resolutions, with TOF1
-having the largest spread.
-
+distributions. The plots in Fig.~\ref{fig:SlabDtAll} show that they
+all centre approximately at 0~ns and they exhibit very similar
+resolutions, with TOF1 having the largest spread.
+Fig.~\ref{fig:TOF_peaks} shows an example of measurement of time of
+flight between first two stations, TOF0 and TOF1. Times of electrons,
+muons, and pions are clearly separated, creating peaks from left to
+right, respectively. The observed width of the electron peak of
+$\sim$0.11~ns is about 30\%~larger than the calculated spread from a
+naive addition of slab \DT{} of the individual TOF stations. This
+difference is attributed to contributions to the resolution of
+individual stations which cancel out in the slab \DT{} measurement,
+and to variations in the traveled path length of the electrons between
+stations TOF0 and TOF1.
 
 \begin{figure}
   \begin{center}
@@ -400,15 +409,15 @@ having the largest spread.
 % consists of uncertainties correlated and uncorrelated between the
 % stations.
 
-The reconstruction of a pixel by matching of 2 slabs from different
-planes of each station is dependent on the slab \DT{}. The 4~ns time
-window for the matching was chosen to cover the errors of the
-calibrations. Yet, there were times when there were signals in slabs
-in each plane of a station, but they were never matched. These events
-were mostly results of multiple particles passing through the station
-and causing signal in one plane only. They would never be matched in
-time as they arrived within the beam bunch time stretch of about
-1~\us{}.
+% The reconstruction of a pixel by matching of 2 slabs from different
+% planes of each station is dependent on the slab \DT{}. The 4~ns time
+% window for the matching was chosen to cover the errors of the
+% calibrations. Yet, there were times when there were signals in slabs
+% in each plane of a station, but they were never matched. These events
+% were mostly results of multiple particles passing through the station
+% and causing signal in one plane only. They would never be matched in
+% time as they arrived within the beam bunch time stretch of about
+% 1~\us{}.
 %Figure~\ref{fig:SpEffByPixel} shows fractions of events where
 %there were signals in two perpendicular slabs and they were
 %time-matched. One can see lower efficiency/fraction in the peripheral
